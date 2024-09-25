@@ -13,7 +13,6 @@ DvlErrLog.txt
 *raw_store.inl
 *.yaml
 *.suo
-sdk/
 x64/
 enc_temp_folder/
 build/

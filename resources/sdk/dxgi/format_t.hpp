@@ -1,0 +1,134 @@
+#pragma once
+#include <sdkgen/support_library.hpp>
+
+namespace dxgi
+{
+    // [enum DXGI_FORMAT]
+    //  WDK 10
+    //
+    enum class format_t : int32_t                                
+    {                                                            
+        format_force_uint =                              -0x1,     // WDK 10
+        format_unknown =                                 0x0,      // WDK 10
+        format_r32g32b32a32_typeless =                   0x1,      // WDK 10
+        format_r32g32b32a32_float =                      0x2,      // WDK 10
+        format_r32g32b32a32_uint =                       0x3,      // WDK 10
+        format_r32g32b32a32_sint =                       0x4,      // WDK 10
+        format_r32g32b32_typeless =                      0x5,      // WDK 10
+        format_r32g32b32_float =                         0x6,      // WDK 10
+        format_r32g32b32_uint =                          0x7,      // WDK 10
+        format_r32g32b32_sint =                          0x8,      // WDK 10
+        format_r16g16b16a16_typeless =                   0x9,      // WDK 10
+        format_r16g16b16a16_float =                      0xa,      // WDK 10
+        format_r16g16b16a16_unorm =                      0xb,      // WDK 10
+        format_r16g16b16a16_uint =                       0xc,      // WDK 10
+        format_r16g16b16a16_snorm =                      0xd,      // WDK 10
+        format_r16g16b16a16_sint =                       0xe,      // WDK 10
+        format_r32g32_typeless =                         0xf,      // WDK 10
+        format_r32g32_float =                            0x10,     // WDK 10
+        format_r32g32_uint =                             0x11,     // WDK 10
+        format_r32g32_sint =                             0x12,     // WDK 10
+        format_r32g8x24_typeless =                       0x13,     // WDK 10
+        format_d32_float_s8x24_uint =                    0x14,     // WDK 10
+        format_r32_float_x8x24_typeless =                0x15,     // WDK 10
+        format_x32_typeless_g8x24_uint =                 0x16,     // WDK 10
+        format_r10g10b10a2_typeless =                    0x17,     // WDK 10
+        format_r10g10b10a2_unorm =                       0x18,     // WDK 10
+        format_r10g10b10a2_uint =                        0x19,     // WDK 10
+        format_r11g11b10_float =                         0x1a,     // WDK 10
+        format_r8g8b8a8_typeless =                       0x1b,     // WDK 10
+        format_r8g8b8a8_unorm =                          0x1c,     // WDK 10
+        format_r8g8b8a8_unorm_srgb =                     0x1d,     // WDK 10
+        format_r8g8b8a8_uint =                           0x1e,     // WDK 10
+        format_r8g8b8a8_snorm =                          0x1f,     // WDK 10
+        format_r8g8b8a8_sint =                           0x20,     // WDK 10
+        format_r16g16_typeless =                         0x21,     // WDK 10
+        format_r16g16_float =                            0x22,     // WDK 10
+        format_r16g16_unorm =                            0x23,     // WDK 10
+        format_r16g16_uint =                             0x24,     // WDK 10
+        format_r16g16_snorm =                            0x25,     // WDK 10
+        format_r16g16_sint =                             0x26,     // WDK 10
+        format_r32_typeless =                            0x27,     // WDK 10
+        format_d32_float =                               0x28,     // WDK 10
+        format_r32_float =                               0x29,     // WDK 10
+        format_r32_uint =                                0x2a,     // WDK 10
+        format_r32_sint =                                0x2b,     // WDK 10
+        format_r24g8_typeless =                          0x2c,     // WDK 10
+        format_d24_unorm_s8_uint =                       0x2d,     // WDK 10
+        format_r24_unorm_x8_typeless =                   0x2e,     // WDK 10
+        format_x24_typeless_g8_uint =                    0x2f,     // WDK 10
+        format_r8g8_typeless =                           0x30,     // WDK 10
+        format_r8g8_unorm =                              0x31,     // WDK 10
+        format_r8g8_uint =                               0x32,     // WDK 10
+        format_r8g8_snorm =                              0x33,     // WDK 10
+        format_r8g8_sint =                               0x34,     // WDK 10
+        format_r16_typeless =                            0x35,     // WDK 10
+        format_r16_float =                               0x36,     // WDK 10
+        format_d16_unorm =                               0x37,     // WDK 10
+        format_r16_unorm =                               0x38,     // WDK 10
+        format_r16_uint =                                0x39,     // WDK 10
+        format_r16_snorm =                               0x3a,     // WDK 10
+        format_r16_sint =                                0x3b,     // WDK 10
+        format_r8_typeless =                             0x3c,     // WDK 10
+        format_r8_unorm =                                0x3d,     // WDK 10
+        format_r8_uint =                                 0x3e,     // WDK 10
+        format_r8_snorm =                                0x3f,     // WDK 10
+        format_r8_sint =                                 0x40,     // WDK 10
+        format_a8_unorm =                                0x41,     // WDK 10
+        format_r1_unorm =                                0x42,     // WDK 10
+        format_r9g9b9e5_sharedexp =                      0x43,     // WDK 10
+        format_r8g8_b8g8_unorm =                         0x44,     // WDK 10
+        format_g8r8_g8b8_unorm =                         0x45,     // WDK 10
+        format_bc1_typeless =                            0x46,     // WDK 10
+        format_bc1_unorm =                               0x47,     // WDK 10
+        format_bc1_unorm_srgb =                          0x48,     // WDK 10
+        format_bc2_typeless =                            0x49,     // WDK 10
+        format_bc2_unorm =                               0x4a,     // WDK 10
+        format_bc2_unorm_srgb =                          0x4b,     // WDK 10
+        format_bc3_typeless =                            0x4c,     // WDK 10
+        format_bc3_unorm =                               0x4d,     // WDK 10
+        format_bc3_unorm_srgb =                          0x4e,     // WDK 10
+        format_bc4_typeless =                            0x4f,     // WDK 10
+        format_bc4_unorm =                               0x50,     // WDK 10
+        format_bc4_snorm =                               0x51,     // WDK 10
+        format_bc5_typeless =                            0x52,     // WDK 10
+        format_bc5_unorm =                               0x53,     // WDK 10
+        format_bc5_snorm =                               0x54,     // WDK 10
+        format_b5g6r5_unorm =                            0x55,     // WDK 10
+        format_b5g5r5a1_unorm =                          0x56,     // WDK 10
+        format_b8g8r8a8_unorm =                          0x57,     // WDK 10
+        format_b8g8r8x8_unorm =                          0x58,     // WDK 10
+        format_r10g10b10_xr_bias_a2_unorm =              0x59,     // WDK 10
+        format_b8g8r8a8_typeless =                       0x5a,     // WDK 10
+        format_b8g8r8a8_unorm_srgb =                     0x5b,     // WDK 10
+        format_b8g8r8x8_typeless =                       0x5c,     // WDK 10
+        format_b8g8r8x8_unorm_srgb =                     0x5d,     // WDK 10
+        format_bc6h_typeless =                           0x5e,     // WDK 10
+        format_bc6h_uf16 =                               0x5f,     // WDK 10
+        format_bc6h_sf16 =                               0x60,     // WDK 10
+        format_bc7_typeless =                            0x61,     // WDK 10
+        format_bc7_unorm =                               0x62,     // WDK 10
+        format_bc7_unorm_srgb =                          0x63,     // WDK 10
+        format_ayuv =                                    0x64,     // WDK 10
+        format_y410 =                                    0x65,     // WDK 10
+        format_y416 =                                    0x66,     // WDK 10
+        format_nv12 =                                    0x67,     // WDK 10
+        format_p010 =                                    0x68,     // WDK 10
+        format_p016 =                                    0x69,     // WDK 10
+        format_420_opaque =                              0x6a,     // WDK 10
+        format_yuy2 =                                    0x6b,     // WDK 10
+        format_y210 =                                    0x6c,     // WDK 10
+        format_y216 =                                    0x6d,     // WDK 10
+        format_nv11 =                                    0x6e,     // WDK 10
+        format_ai44 =                                    0x6f,     // WDK 10
+        format_ia44 =                                    0x70,     // WDK 10
+        format_p8 =                                      0x71,     // WDK 10
+        format_a8p8 =                                    0x72,     // WDK 10
+        format_b4g4r4a4_unorm =                          0x73,     // WDK 10
+        format_p208 =                                    0x82,     // WDK 10
+        format_v208 =                                    0x83,     // WDK 10
+        format_v408 =                                    0x84,     // WDK 10
+        format_sampler_feedback_min_mip_opaque =         0xbd,     // WDK 10
+        format_sampler_feedback_mip_region_used_opaque = 0xbe,     // WDK 10
+    };                                                           
+};

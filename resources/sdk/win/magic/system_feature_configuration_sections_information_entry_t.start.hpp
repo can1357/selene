@@ -1,0 +1,9 @@
+#if !IN_PARSER
+#define _m00 _SDK_MAGIC_PROPERTY(_SDK_ESCAPE(uint64_t), "_SYSTEM_FEATURE_CONFIGURATION_SECTIONS_INFORMATION_ENTRY.ChangeStamp", change_stamp, 0x0, 0x40, true, 0xd403cfc501cd525f)
+#define _m01 _SDK_MAGIC_PROPERTY(_SDK_ESCAPE(void*), "_SYSTEM_FEATURE_CONFIGURATION_SECTIONS_INFORMATION_ENTRY.Section", section, 0x40, 0x40, true, 0xf62201d1dd139ca6)
+#define _m02 _SDK_MAGIC_PROPERTY(_SDK_ESCAPE(uint64_t), "_SYSTEM_FEATURE_CONFIGURATION_SECTIONS_INFORMATION_ENTRY.Size", size, 0x80, 0x40, true, 0x9efe4acd639fcbfb)
+#else
+#define _m00
+#define _m01
+#define _m02
+#endif

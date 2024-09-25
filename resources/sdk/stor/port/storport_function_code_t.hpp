@@ -1,0 +1,136 @@
+#pragma once
+#include <sdkgen/support_library.hpp>
+
+namespace stor::port
+{
+    // [enum _STORPORT_FUNCTION_CODE]
+    //  WDK 10, Windows 10 v1607, Windows 10 v2004, Windows 11, Windows 10 v20H2
+    //
+    enum class storport_function_code_t : int32_t                        
+    {                                                                    
+        function_allocate_pool =                                 0x0,      // WDK 10, Windows 10 v1607, Windows 10 v2004, Windows 11, Windows 10 v20H2
+        function_free_pool =                                     0x1,      // WDK 10, Windows 10 v1607, Windows 10 v2004, Windows 11, Windows 10 v20H2
+        function_allocate_mdl =                                  0x2,      // WDK 10, Windows 10 v1607, Windows 10 v2004, Windows 11, Windows 10 v20H2
+        function_free_mdl =                                      0x3,      // WDK 10, Windows 10 v1607, Windows 10 v2004, Windows 11, Windows 10 v20H2
+        function_build_mdl_for_non_paged_pool =                  0x4,      // WDK 10, Windows 10 v1607, Windows 10 v2004, Windows 11, Windows 10 v20H2
+        function_get_system_address =                            0x5,      // WDK 10, Windows 10 v1607, Windows 10 v2004, Windows 11, Windows 10 v20H2
+        function_get_original_mdl =                              0x6,      // WDK 10, Windows 10 v1607, Windows 10 v2004, Windows 11, Windows 10 v20H2
+        function_complete_service_irp =                          0x7,      // WDK 10, Windows 10 v1607, Windows 10 v2004, Windows 11, Windows 10 v20H2
+        function_get_device_objects =                            0x8,      // WDK 10, Windows 10 v1607, Windows 10 v2004, Windows 11, Windows 10 v20H2
+        function_build_scatter_gather_list =                     0x9,      // WDK 10, Windows 10 v1607, Windows 10 v2004, Windows 11, Windows 10 v20H2
+        function_put_scatter_gather_list =                       0xa,      // WDK 10, Windows 10 v1607, Windows 10 v2004, Windows 11, Windows 10 v20H2
+        function_acquire_msi_spin_lock =                         0xb,      // WDK 10, Windows 10 v1607, Windows 10 v2004, Windows 11, Windows 10 v20H2
+        function_release_msi_spin_lock =                         0xc,      // WDK 10, Windows 10 v1607, Windows 10 v2004, Windows 11, Windows 10 v20H2
+        function_get_message_interrupt_information =             0xd,      // WDK 10, Windows 10 v1607, Windows 10 v2004, Windows 11, Windows 10 v20H2
+        function_initialize_performance_optimizations =          0xe,      // WDK 10, Windows 10 v1607, Windows 10 v2004, Windows 11, Windows 10 v20H2
+        function_get_start_io_performance_parameters =           0xf,      // WDK 10, Windows 10 v1607, Windows 10 v2004, Windows 11, Windows 10 v20H2
+        function_log_system_event =                              0x10,     // WDK 10, Windows 10 v1607, Windows 10 v2004, Windows 11, Windows 10 v20H2
+        function_get_current_processor_number =                  0x11,     // WDK 10, Windows 10 v1607, Windows 10 v2004, Windows 11, Windows 10 v20H2
+        function_get_active_group_count =                        0x12,     // WDK 10, Windows 10 v1607, Windows 10 v2004, Windows 11, Windows 10 v20H2
+        function_get_group_affinity =                            0x13,     // WDK 10, Windows 10 v1607, Windows 10 v2004, Windows 11, Windows 10 v20H2
+        function_get_active_node_count =                         0x14,     // WDK 10, Windows 10 v1607, Windows 10 v2004, Windows 11, Windows 10 v20H2
+        function_get_node_affinity =                             0x15,     // WDK 10, Windows 10 v1607, Windows 10 v2004, Windows 11, Windows 10 v20H2
+        function_get_highest_node_number =                       0x16,     // WDK 10, Windows 10 v1607, Windows 10 v2004, Windows 11, Windows 10 v20H2
+        function_get_logical_processor_relationship =            0x17,     // WDK 10, Windows 10 v1607, Windows 10 v2004, Windows 11, Windows 10 v20H2
+        function_allocate_contiguous_memory_specify_cache_node = 0x18,     // WDK 10, Windows 10 v1607, Windows 10 v2004, Windows 11, Windows 10 v20H2
+        function_free_contiguous_memory_specify_cache =          0x19,     // WDK 10, Windows 10 v1607, Windows 10 v2004, Windows 11, Windows 10 v20H2
+        function_set_power_setting_notification_guids =          0x1a,     // WDK 10, Windows 10 v1607, Windows 10 v2004, Windows 11, Windows 10 v20H2
+        function_invoke_acpi_method =                            0x1b,     // WDK 10, Windows 10 v1607, Windows 10 v2004, Windows 11, Windows 10 v20H2
+        function_get_request_info =                              0x1c,     // WDK 10, Windows 10 v1607, Windows 10 v2004, Windows 11, Windows 10 v20H2
+        function_initialize_worker =                             0x1d,     // WDK 10, Windows 10 v1607, Windows 10 v2004, Windows 11, Windows 10 v20H2
+        function_queue_work_item =                               0x1e,     // WDK 10, Windows 10 v1607, Windows 10 v2004, Windows 11, Windows 10 v20H2
+        function_free_worker =                                   0x1f,     // WDK 10, Windows 10 v1607, Windows 10 v2004, Windows 11, Windows 10 v20H2
+        function_initialize_timer =                              0x20,     // WDK 10, Windows 10 v1607, Windows 10 v2004, Windows 11, Windows 10 v20H2
+        function_request_timer =                                 0x21,     // WDK 10, Windows 10 v1607, Windows 10 v2004, Windows 11, Windows 10 v20H2
+        function_free_timer =                                    0x22,     // WDK 10, Windows 10 v1607, Windows 10 v2004, Windows 11, Windows 10 v20H2
+        function_initialize_s_list_head =                        0x23,     // WDK 10, Windows 10 v1607, Windows 10 v2004, Windows 11, Windows 10 v20H2
+        function_interlocked_flush_s_list =                      0x24,     // WDK 10, Windows 10 v1607, Windows 10 v2004, Windows 11, Windows 10 v20H2
+        function_interlocked_pop_entry_s_list =                  0x25,     // WDK 10, Windows 10 v1607, Windows 10 v2004, Windows 11, Windows 10 v20H2
+        function_interlocked_push_entry_s_list =                 0x26,     // WDK 10, Windows 10 v1607, Windows 10 v2004, Windows 11, Windows 10 v20H2
+        function_query_depth_s_list =                            0x27,     // WDK 10, Windows 10 v1607, Windows 10 v2004, Windows 11, Windows 10 v20H2
+        function_get_activity_id =                               0x28,     // WDK 10, Windows 10 v1607, Windows 10 v2004, Windows 11, Windows 10 v20H2
+        function_get_system_port_number =                        0x29,     // WDK 10, Windows 10 v1607, Windows 10 v2004, Windows 11, Windows 10 v20H2
+        function_get_data_in_buffer_mdl =                        0x2a,     // WDK 10, Windows 10 v1607, Windows 10 v2004, Windows 11, Windows 10 v20H2
+        function_get_data_in_buffer_system_address =             0x2b,     // WDK 10, Windows 10 v1607, Windows 10 v2004, Windows 11, Windows 10 v20H2
+        function_get_data_in_buffer_scatter_gather_list =        0x2c,     // WDK 10, Windows 10 v1607, Windows 10 v2004, Windows 11, Windows 10 v20H2
+        function_mark_dump_memory =                              0x2d,     // WDK 10, Windows 10 v1607, Windows 10 v2004, Windows 11, Windows 10 v20H2
+        function_set_unit_attributes =                           0x2e,     // WDK 10, Windows 10 v1607, Windows 10 v2004, Windows 11, Windows 10 v20H2
+        function_query_performance_counter =                     0x2f,     // WDK 10, Windows 10 v1607, Windows 10 v2004, Windows 11, Windows 10 v20H2
+        function_initialize_po_fx_power =                        0x30,     // WDK 10, Windows 10 v1607, Windows 10 v2004, Windows 11, Windows 10 v20H2
+        function_po_fx_activate_component =                      0x31,     // WDK 10, Windows 10 v1607, Windows 10 v2004, Windows 11, Windows 10 v20H2
+        function_po_fx_idle_component =                          0x32,     // WDK 10, Windows 10 v1607, Windows 10 v2004, Windows 11, Windows 10 v20H2
+        function_po_fx_set_component_latency =                   0x33,     // WDK 10, Windows 10 v1607, Windows 10 v2004, Windows 11, Windows 10 v20H2
+        function_po_fx_set_component_residency =                 0x34,     // WDK 10, Windows 10 v1607, Windows 10 v2004, Windows 11, Windows 10 v20H2
+        function_po_fx_power_control =                           0x35,     // WDK 10, Windows 10 v1607, Windows 10 v2004, Windows 11, Windows 10 v20H2
+        function_flush_data_buffer_mdl =                         0x36,     // WDK 10, Windows 10 v1607, Windows 10 v2004, Windows 11, Windows 10 v20H2
+        function_device_operation_allowed =                      0x37,     // WDK 10, Windows 10 v1607, Windows 10 v2004, Windows 11, Windows 10 v20H2
+        function_get_processor_index_from_number =               0x38,     // WDK 10, Windows 10 v1607, Windows 10 v2004, Windows 11, Windows 10 v20H2
+        function_po_fx_set_idle_timeout =                        0x39,     // WDK 10, Windows 10 v1607, Windows 10 v2004, Windows 11, Windows 10 v20H2
+        function_miniport_etw_event2 =                           0x3a,     // WDK 10, Windows 10 v1607, Windows 10 v2004, Windows 11, Windows 10 v20H2
+        function_miniport_etw_event4 =                           0x3b,     // WDK 10, Windows 10 v1607, Windows 10 v2004, Windows 11, Windows 10 v20H2
+        function_miniport_etw_event8 =                           0x3c,     // WDK 10, Windows 10 v1607, Windows 10 v2004, Windows 11, Windows 10 v20H2
+        function_current_os_installation_upgrade =               0x3d,     // WDK 10, Windows 10 v1607, Windows 10 v2004, Windows 11, Windows 10 v20H2
+        function_registry_read_adapter_key =                     0x3e,     // WDK 10, Windows 10 v1607, Windows 10 v2004, Windows 11, Windows 10 v20H2
+        function_registry_write_adapter_key =                    0x3f,     // WDK 10, Windows 10 v1607, Windows 10 v2004, Windows 11, Windows 10 v20H2
+        function_set_adapter_bus_type =                          0x40,     // WDK 10, Windows 10 v1607, Windows 10 v2004, Windows 11, Windows 10 v20H2
+        function_po_fx_register_perf_states =                    0x41,     // WDK 10, Windows 10 v1607, Windows 10 v2004, Windows 11, Windows 10 v20H2
+        function_po_fx_set_perf_state =                          0x42,     // WDK 10, Windows 10 v1607, Windows 10 v2004, Windows 11, Windows 10 v20H2
+        function_get_d3_cold_support =                           0x43,     // WDK 10, Windows 10 v1607, Windows 10 v2004, Windows 11, Windows 10 v20H2
+        function_initialize_rpmb =                               0x44,     // WDK 10, Windows 10 v1607, Windows 10 v2004, Windows 11, Windows 10 v20H2
+        function_allocate_hmb =                                  0x45,     // WDK 10, Windows 10 v1607, Windows 10 v2004, Windows 11, Windows 10 v20H2
+        function_free_hmb =                                      0x46,     // WDK 10, Windows 10 v1607, Windows 10 v2004, Windows 11, Windows 10 v20H2
+        function_propagate_irp_extension =                       0x47,     // WDK 10, Windows 10 v1607, Windows 10 v2004, Windows 11, Windows 10 v20H2
+        filler_function1 =                                       0x48,     // Windows 10 v1607
+        function_interlocked_insert_head_list =                  0x48,     // WDK 10, Windows 10 v2004, Windows 11, Windows 10 v20H2
+        filler_function2 =                                       0x49,     // Windows 10 v1607
+        function_interlocked_insert_tail_list =                  0x49,     // WDK 10, Windows 10 v2004, Windows 11, Windows 10 v20H2
+        filler_function3 =                                       0x4a,     // Windows 10 v1607
+        function_interlocked_remove_head_list =                  0x4a,     // WDK 10, Windows 10 v2004, Windows 11, Windows 10 v20H2
+        filler_function4 =                                       0x4b,     // Windows 10 v1607
+        function_initialize_spinlock =                           0x4b,     // WDK 10, Windows 10 v2004, Windows 11, Windows 10 v20H2
+        filler_function5 =                                       0x4c,     // Windows 10 v1607
+        function_get_pfns =                                      0x4c,     // WDK 10, Windows 10 v2004, Windows 11, Windows 10 v20H2
+        filler_function6 =                                       0x4d,     // Windows 10 v1607
+        function_initialize_crypto_engine =                      0x4d,     // WDK 10, Windows 10 v2004, Windows 11, Windows 10 v20H2
+        filler_function7 =                                       0x4e,     // Windows 10 v1607
+        function_get_request_crypto_info =                       0x4e,     // WDK 10, Windows 10 v2004, Windows 11, Windows 10 v20H2
+        filler_function8 =                                       0x4f,     // Windows 10 v1607
+        function_miniport_telemetry =                            0x4f,     // WDK 10, Windows 10 v2004, Windows 11, Windows 10 v20H2
+        function_update_adapter_max_io =                         0x50,     // WDK 10, Windows 10 v1607, Windows 10 v2004, Windows 11, Windows 10 v20H2
+        function_delay_execution =                               0x51,     // WDK 10, Windows 10 v1607, Windows 10 v2004, Windows 11, Windows 10 v20H2
+        function_allocate_dma_memory =                           0x52,     // WDK 10, Windows 10 v2004, Windows 11, Windows 10 v20H2
+        function_free_dma_memory =                               0x53,     // WDK 10, Windows 10 v2004, Windows 11, Windows 10 v20H2
+        function_update_adapter_max_io_info =                    0x54,     // WDK 10, Windows 10 v2004, Windows 11, Windows 10 v20H2
+        function_miniport_channel_etw_event2 =                   0x55,     // WDK 10, Windows 10 v2004, Windows 11, Windows 10 v20H2
+        function_miniport_channel_etw_event4 =                   0x56,     // WDK 10, Windows 10 v2004, Windows 11, Windows 10 v20H2
+        function_miniport_channel_etw_event8 =                   0x57,     // WDK 10, Windows 10 v2004, Windows 11, Windows 10 v20H2
+        function_initialize_high_resolution_timer =              0x58,     // WDK 10, Windows 10 v2004, Windows 11, Windows 10 v20H2
+        function_request_high_resolution_timer =                 0x59,     // WDK 10, Windows 10 v2004, Windows 11, Windows 10 v20H2
+        function_cancel_high_resolution_timer =                  0x5a,     // WDK 10, Windows 10 v2004, Windows 11, Windows 10 v20H2
+        function_free_high_resolution_timer =                    0x5b,     // WDK 10, Windows 10 v2004, Windows 11, Windows 10 v20H2
+        function_get_current_processor_index =                   0x5c,     // WDK 10, Windows 10 v2004, Windows 11, Windows 10 v20H2
+        function_acquire_spin_lock =                             0x5d,     // WDK 10, Windows 10 v2004, Windows 11, Windows 10 v20H2
+        function_get_processor_count =                           0x5e,     // WDK 10, Windows 10 v2004, Windows 11, Windows 10 v20H2
+        function_cancel_dpc =                                    0x5f,     // WDK 10, Windows 10 v2004, Windows 11, Windows 10 v20H2
+        function_miniport_telemetry_ex =                         0x60,     // WDK 10, Windows 10 v2004, Windows 11, Windows 10 v20H2
+        function_query_configuration =                           0x61,     // WDK 10, Windows 10 v2004, Windows 11, Windows 10 v20H2
+        function_log_hardware_error =                            0x62,     // WDK 10, Windows 10 v2004, Windows 11, Windows 10 v20H2
+        function_initialize_event =                              0x63,     // Windows 10 v2004, Windows 11, Windows 10 v20H2
+        function_wait_for_event =                                0x64,     // Windows 10 v2004, Windows 11, Windows 10 v20H2
+        function_set_event =                                     0x65,     // Windows 10 v2004, Windows 11, Windows 10 v20H2
+        function_device_reset =                                  0x66,     // Windows 10 v2004, Windows 11, Windows 10 v20H2
+        function_set_feature_list =                              0x67,     // Windows 10 v2004, Windows 11, Windows 10 v20H2
+        function_capture_live_dump =                             0x68,     // Windows 11
+        function_miniport_log_byte_stream =                      0x69,     // Windows 11
+        function_query_dpc_watchdog_information =                0x6a,     // Windows 11
+        function_query_timer_min_interval =                      0x6b,     // Windows 11
+        function_mask_pci_msix_entry =                           0x6c,     // Windows 11
+        function_get_current_irql =                              0x6d,     // Windows 11
+        function_create_system_thread =                          0x6e,     // Windows 11
+        function_set_priority_thread =                           0x6f,     // Windows 11
+        function_set_system_group_affinity_thread =              0x70,     // Windows 11
+        function_revert_to_user_group_affinity_thread =          0x71,     // Windows 11
+        function_device_reset_ex =                               0x72,     // Windows 11
+        function_miniport_report_internal_data =                 0x73,     // Windows 11
+    };                                                                   
+};

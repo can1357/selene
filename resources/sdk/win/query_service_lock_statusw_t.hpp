@@ -1,0 +1,23 @@
+#pragma once
+#include <sdkgen/support_library.hpp>
+
+#include "magic/query_service_lock_statusw_t.start.hpp"
+namespace win
+{
+    // [struct _QUERY_SERVICE_LOCK_STATUSW]
+    // => Windows 10 v1607, Windows 10 v2004, Windows 11, Windows 10 v20H2
+    //
+    struct query_service_lock_statusw_t
+    {                                  
+        // Windows 10 v1607, Windows 10 v2004, Windows 11, Windows 10 v20H2                 
+        //                             
+        _m00 uint32_t f_is_locked;       //{ +0x0000    +0x0000    +0x0000    +0x0000    } | .fIsLocked
+        _m01 wchar_t* lp_lock_owner;     //{ +0x0008    +0x0008    +0x0008    +0x0008    } | .lpLockOwner
+        _m02 uint32_t dw_lock_duration;  //{ +0x0010    +0x0010    +0x0010    +0x0010    } | .dwLockDuration
+                                       
+        SDK_MAGIC_PROPERTIES( "_QUERY_SERVICE_LOCK_STATUSW.$", 0x18, true, 0xc92fc039f4f5fdb4 );                 
+        SDK_FIXED_SIZE( query_service_lock_statusw_t, 0x18 );                 
+    };                                 
+};
+#include "magic/query_service_lock_statusw_t.end.hpp"
+SDK_VERIFY( struct win::query_service_lock_statusw_t, 0x18 );

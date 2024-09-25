@@ -1,0 +1,17 @@
+#if !IN_PARSER
+#define _m00 _SDK_MAGIC_PROPERTY(_SDK_ESCAPE(const void*), "_ASSEMBLY_STORAGE_MAP_RESOLUTION_CALLBACK_DATA_RESOLUTION_BEGINNING.Data", data, 0x0, 0x40, true, 0xd347aa20409eaf52)
+#define _m01 _SDK_MAGIC_PROPERTY(_SDK_ESCAPE(uint32_t), "_ASSEMBLY_STORAGE_MAP_RESOLUTION_CALLBACK_DATA_RESOLUTION_BEGINNING.AssemblyRosterIndex", assembly_roster_index, 0x40, 0x20, true, 0xa9cc0b8224e9104c)
+#define _m02 _SDK_MAGIC_PROPERTY(_SDK_ESCAPE(void*), "_ASSEMBLY_STORAGE_MAP_RESOLUTION_CALLBACK_DATA_RESOLUTION_BEGINNING.ResolutionContext", resolution_context, 0x80, 0x40, true, 0xd33cb75b27ccb50f)
+#define _m03 _SDK_MAGIC_PROPERTY(_SDK_ESCAPE(nt::unicode_view), "_ASSEMBLY_STORAGE_MAP_RESOLUTION_CALLBACK_DATA_RESOLUTION_BEGINNING.Root", root, 0xc0, 0x80, true, 0x9fabfbbbc618fd55)
+#define _m04 _SDK_MAGIC_PROPERTY(_SDK_ESCAPE(uint8_t), "_ASSEMBLY_STORAGE_MAP_RESOLUTION_CALLBACK_DATA_RESOLUTION_BEGINNING.KnownRoot", known_root, 0x140, 0x8, true, 0x256ad8a67fcbda46)
+#define _m05 _SDK_MAGIC_PROPERTY(_SDK_ESCAPE(uint64_t), "_ASSEMBLY_STORAGE_MAP_RESOLUTION_CALLBACK_DATA_RESOLUTION_BEGINNING.RootCount", root_count, 0x180, 0x40, true, 0xdf8dbbd1cab34ae6)
+#define _m06 _SDK_MAGIC_PROPERTY(_SDK_ESCAPE(uint8_t), "_ASSEMBLY_STORAGE_MAP_RESOLUTION_CALLBACK_DATA_RESOLUTION_BEGINNING.CancelResolution", cancel_resolution, 0x1c0, 0x8, true, 0xebfc21dce3c3d8df)
+#else
+#define _m00
+#define _m01
+#define _m02
+#define _m03
+#define _m04
+#define _m05
+#define _m06
+#endif

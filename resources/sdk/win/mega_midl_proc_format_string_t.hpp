@@ -1,0 +1,20 @@
+#pragma once
+#include <sdkgen/support_library.hpp>
+
+#include "magic/mega_midl_proc_format_string_t.start.hpp"
+namespace win
+{
+    // [struct _mega_MIDL_PROC_FORMAT_STRING]
+    // => Windows 10 v1607, Windows 10 v2004, Windows 11, Windows 10 v20H2
+    //
+    struct mega_midl_proc_format_string_t      
+    {                                          
+        // Windows 10 v1607, Windows 10 v2004, Windows 11, Windows 10 v20H2       
+        //                                     
+        _m00 sdk::array<uint8_t, 15161> format;  //{ +0x0002    +0x0002    +0x0002    +0x0002    } | .Format
+                                               
+        SDK_MAGIC_PROPERTIES( "_mega_MIDL_PROC_FORMAT_STRING.$", 0x3df4, true, 0x1d24a89a023c66e0 );       
+        SDK_DYNAMIC_SIZE( mega_midl_proc_format_string_t );       
+    };                                         
+};
+#include "magic/mega_midl_proc_format_string_t.end.hpp"

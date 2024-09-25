@@ -1,0 +1,17 @@
+#pragma once
+#include <sdkgen/support_library.hpp>
+
+namespace wdf
+{
+    // [enum _WDF_SYNCHRONIZATION_SCOPE]
+    //  WDK 10, Windows 10 v1607, Windows 10 v2004, Windows 11, Windows 10 v20H2
+    //
+    enum class synchronization_scope_t : int32_t
+    {                                           
+        invalid =             0x0,                // WDK 10, Windows 10 v1607, Windows 10 v2004, Windows 11, Windows 10 v20H2
+        inherit_from_parent = 0x1,                // WDK 10, Windows 10 v1607, Windows 10 v2004, Windows 11, Windows 10 v20H2
+        device =              0x2,                // WDK 10, Windows 10 v1607, Windows 10 v2004, Windows 11, Windows 10 v20H2
+        queue =               0x3,                // WDK 10, Windows 10 v1607, Windows 10 v2004, Windows 11, Windows 10 v20H2
+        none =                0x4,                // WDK 10, Windows 10 v1607, Windows 10 v2004, Windows 11, Windows 10 v20H2
+    };                                          
+};

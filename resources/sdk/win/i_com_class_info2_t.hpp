@@ -1,0 +1,16 @@
+#pragma once
+#include <sdkgen/support_library.hpp>
+
+namespace win
+{
+    // [struct IComClassInfo2]
+    // => Windows 10 v1607, Windows 10 v2004, Windows 11, Windows 10 v20H2
+    //
+    struct i_com_class_info2_t
+    {                         
+                              
+        SDK_MAGIC_PROPERTIES( "IComClassInfo2.$", 0x8, true, 0xadebf9ccbf59f692 );
+        SDK_FIXED_SIZE( i_com_class_info2_t, 0x8 );
+    };                        
+};
+SDK_VERIFY( struct win::i_com_class_info2_t, 0x8 );

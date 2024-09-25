@@ -1,0 +1,135 @@
+#pragma once
+#include <sdkgen/support_library.hpp>
+
+namespace win
+{
+    // [enum FORMAT_CHARACTER]
+    //  Windows 10 v1607, Windows 10 v2004, Windows 11, Windows 10 v20H2
+    //
+    enum class format_character_t : int32_t
+    {                                      
+        zero =                   0x0,        // Windows 10 v1607, Windows 10 v2004, Windows 11, Windows 10 v20H2
+        byte =                   0x1,        // Windows 10 v1607, Windows 10 v2004, Windows 11, Windows 10 v20H2
+        _char =                  0x2,        // Windows 10 v1607, Windows 10 v2004, Windows 11, Windows 10 v20H2
+        small =                  0x3,        // Windows 10 v1607, Windows 10 v2004, Windows 11, Windows 10 v20H2
+        usmall =                 0x4,        // Windows 10 v1607, Windows 10 v2004, Windows 11, Windows 10 v20H2
+        wchar =                  0x5,        // Windows 10 v1607, Windows 10 v2004, Windows 11, Windows 10 v20H2
+        _short =                 0x6,        // Windows 10 v1607, Windows 10 v2004, Windows 11, Windows 10 v20H2
+        ushort =                 0x7,        // Windows 10 v1607, Windows 10 v2004, Windows 11, Windows 10 v20H2
+        _long =                  0x8,        // Windows 10 v1607, Windows 10 v2004, Windows 11, Windows 10 v20H2
+        ulong =                  0x9,        // Windows 10 v1607, Windows 10 v2004, Windows 11, Windows 10 v20H2
+        _float =                 0xa,        // Windows 10 v1607, Windows 10 v2004, Windows 11, Windows 10 v20H2
+        hyper =                  0xb,        // Windows 10 v1607, Windows 10 v2004, Windows 11, Windows 10 v20H2
+        _double =                0xc,        // Windows 10 v1607, Windows 10 v2004, Windows 11, Windows 10 v20H2
+        enum16 =                 0xd,        // Windows 10 v1607, Windows 10 v2004, Windows 11, Windows 10 v20H2
+        enum32 =                 0xe,        // Windows 10 v1607, Windows 10 v2004, Windows 11, Windows 10 v20H2
+        ignore =                 0xf,        // Windows 10 v1607, Windows 10 v2004, Windows 11, Windows 10 v20H2
+        error_status_t =         0x10,       // Windows 10 v1607, Windows 10 v2004, Windows 11, Windows 10 v20H2
+        rp =                     0x11,       // Windows 10 v1607, Windows 10 v2004, Windows 11, Windows 10 v20H2
+        up =                     0x12,       // Windows 10 v1607, Windows 10 v2004, Windows 11, Windows 10 v20H2
+        op =                     0x13,       // Windows 10 v1607, Windows 10 v2004, Windows 11, Windows 10 v20H2
+        fp =                     0x14,       // Windows 10 v1607, Windows 10 v2004, Windows 11, Windows 10 v20H2
+        _struct =                0x15,       // Windows 10 v1607, Windows 10 v2004, Windows 11, Windows 10 v20H2
+        pstruct =                0x16,       // Windows 10 v1607, Windows 10 v2004, Windows 11, Windows 10 v20H2
+        cstruct =                0x17,       // Windows 10 v1607, Windows 10 v2004, Windows 11, Windows 10 v20H2
+        cpstruct =               0x18,       // Windows 10 v1607, Windows 10 v2004, Windows 11, Windows 10 v20H2
+        cvstruct =               0x19,       // Windows 10 v1607, Windows 10 v2004, Windows 11, Windows 10 v20H2
+        bogus_struct =           0x1a,       // Windows 10 v1607, Windows 10 v2004, Windows 11, Windows 10 v20H2
+        carray =                 0x1b,       // Windows 10 v1607, Windows 10 v2004, Windows 11, Windows 10 v20H2
+        cvarray =                0x1c,       // Windows 10 v1607, Windows 10 v2004, Windows 11, Windows 10 v20H2
+        smfarray =               0x1d,       // Windows 10 v1607, Windows 10 v2004, Windows 11, Windows 10 v20H2
+        lgfarray =               0x1e,       // Windows 10 v1607, Windows 10 v2004, Windows 11, Windows 10 v20H2
+        smvarray =               0x1f,       // Windows 10 v1607, Windows 10 v2004, Windows 11, Windows 10 v20H2
+        lgvarray =               0x20,       // Windows 10 v1607, Windows 10 v2004, Windows 11, Windows 10 v20H2
+        bogus_array =            0x21,       // Windows 10 v1607, Windows 10 v2004, Windows 11, Windows 10 v20H2
+        c_cstring =              0x22,       // Windows 10 v1607, Windows 10 v2004, Windows 11, Windows 10 v20H2
+        c_bstring =              0x23,       // Windows 10 v1607, Windows 10 v2004, Windows 11, Windows 10 v20H2
+        c_sstring =              0x24,       // Windows 10 v1607, Windows 10 v2004, Windows 11, Windows 10 v20H2
+        c_wstring =              0x25,       // Windows 10 v1607, Windows 10 v2004, Windows 11, Windows 10 v20H2
+        cstring =                0x26,       // Windows 10 v1607, Windows 10 v2004, Windows 11, Windows 10 v20H2
+        bstring =                0x27,       // Windows 10 v1607, Windows 10 v2004, Windows 11, Windows 10 v20H2
+        sstring =                0x28,       // Windows 10 v1607, Windows 10 v2004, Windows 11, Windows 10 v20H2
+        wstring =                0x29,       // Windows 10 v1607, Windows 10 v2004, Windows 11, Windows 10 v20H2
+        encapsulated_union =     0x2a,       // Windows 10 v1607, Windows 10 v2004, Windows 11, Windows 10 v20H2
+        non_encapsulated_union = 0x2b,       // Windows 10 v1607, Windows 10 v2004, Windows 11, Windows 10 v20H2
+        byte_count_pointer =     0x2c,       // Windows 10 v1607, Windows 10 v2004, Windows 11, Windows 10 v20H2
+        transmit_as =            0x2d,       // Windows 10 v1607, Windows 10 v2004, Windows 11, Windows 10 v20H2
+        represent_as =           0x2e,       // Windows 10 v1607, Windows 10 v2004, Windows 11, Windows 10 v20H2
+        ip =                     0x2f,       // Windows 10 v1607, Windows 10 v2004, Windows 11, Windows 10 v20H2
+        bind_context =           0x30,       // Windows 10 v1607, Windows 10 v2004, Windows 11, Windows 10 v20H2
+        bind_generic =           0x31,       // Windows 10 v1607, Windows 10 v2004, Windows 11, Windows 10 v20H2
+        bind_primitive =         0x32,       // Windows 10 v1607, Windows 10 v2004, Windows 11, Windows 10 v20H2
+        auto_handle =            0x33,       // Windows 10 v1607, Windows 10 v2004, Windows 11, Windows 10 v20H2
+        callback_handle =        0x34,       // Windows 10 v1607, Windows 10 v2004, Windows 11, Windows 10 v20H2
+        unused1 =                0x35,       // Windows 10 v1607, Windows 10 v2004, Windows 11, Windows 10 v20H2
+        pointer =                0x36,       // Windows 10 v1607, Windows 10 v2004, Windows 11, Windows 10 v20H2
+        alignm2 =                0x37,       // Windows 10 v1607, Windows 10 v2004, Windows 11, Windows 10 v20H2
+        alignm4 =                0x38,       // Windows 10 v1607, Windows 10 v2004, Windows 11, Windows 10 v20H2
+        alignm8 =                0x39,       // Windows 10 v1607, Windows 10 v2004, Windows 11, Windows 10 v20H2
+        unused2 =                0x3a,       // Windows 10 v1607, Windows 10 v2004, Windows 11, Windows 10 v20H2
+        unused3 =                0x3b,       // Windows 10 v1607, Windows 10 v2004, Windows 11, Windows 10 v20H2
+        system_handle =          0x3c,       // Windows 10 v1607, Windows 10 v2004, Windows 11, Windows 10 v20H2
+        structpad1 =             0x3d,       // Windows 10 v1607, Windows 10 v2004, Windows 11, Windows 10 v20H2
+        structpad2 =             0x3e,       // Windows 10 v1607, Windows 10 v2004, Windows 11, Windows 10 v20H2
+        structpad3 =             0x3f,       // Windows 10 v1607, Windows 10 v2004, Windows 11, Windows 10 v20H2
+        structpad4 =             0x40,       // Windows 10 v1607, Windows 10 v2004, Windows 11, Windows 10 v20H2
+        structpad5 =             0x41,       // Windows 10 v1607, Windows 10 v2004, Windows 11, Windows 10 v20H2
+        structpad6 =             0x42,       // Windows 10 v1607, Windows 10 v2004, Windows 11, Windows 10 v20H2
+        structpad7 =             0x43,       // Windows 10 v1607, Windows 10 v2004, Windows 11, Windows 10 v20H2
+        string_sized =           0x44,       // Windows 10 v1607, Windows 10 v2004, Windows 11, Windows 10 v20H2
+        unused5 =                0x45,       // Windows 10 v1607, Windows 10 v2004, Windows 11, Windows 10 v20H2
+        no_repeat =              0x46,       // Windows 10 v1607, Windows 10 v2004, Windows 11, Windows 10 v20H2
+        fixed_repeat =           0x47,       // Windows 10 v1607, Windows 10 v2004, Windows 11, Windows 10 v20H2
+        variable_repeat =        0x48,       // Windows 10 v1607, Windows 10 v2004, Windows 11, Windows 10 v20H2
+        fixed_offset =           0x49,       // Windows 10 v1607, Windows 10 v2004, Windows 11, Windows 10 v20H2
+        variable_offset =        0x4a,       // Windows 10 v1607, Windows 10 v2004, Windows 11, Windows 10 v20H2
+        pp =                     0x4b,       // Windows 10 v1607, Windows 10 v2004, Windows 11, Windows 10 v20H2
+        embedded_complex =       0x4c,       // Windows 10 v1607, Windows 10 v2004, Windows 11, Windows 10 v20H2
+        in_param =               0x4d,       // Windows 10 v1607, Windows 10 v2004, Windows 11, Windows 10 v20H2
+        in_param_basetype =      0x4e,       // Windows 10 v1607, Windows 10 v2004, Windows 11, Windows 10 v20H2
+        in_param_no_free_inst =  0x4f,       // Windows 10 v1607, Windows 10 v2004, Windows 11, Windows 10 v20H2
+        in_out_param =           0x50,       // Windows 10 v1607, Windows 10 v2004, Windows 11, Windows 10 v20H2
+        out_param =              0x51,       // Windows 10 v1607, Windows 10 v2004, Windows 11, Windows 10 v20H2
+        return_param =           0x52,       // Windows 10 v1607, Windows 10 v2004, Windows 11, Windows 10 v20H2
+        return_param_basetype =  0x53,       // Windows 10 v1607, Windows 10 v2004, Windows 11, Windows 10 v20H2
+        dereference =            0x54,       // Windows 10 v1607, Windows 10 v2004, Windows 11, Windows 10 v20H2
+        div_2 =                  0x55,       // Windows 10 v1607, Windows 10 v2004, Windows 11, Windows 10 v20H2
+        mult_2 =                 0x56,       // Windows 10 v1607, Windows 10 v2004, Windows 11, Windows 10 v20H2
+        add_1 =                  0x57,       // Windows 10 v1607, Windows 10 v2004, Windows 11, Windows 10 v20H2
+        sub_1 =                  0x58,       // Windows 10 v1607, Windows 10 v2004, Windows 11, Windows 10 v20H2
+        callback =               0x59,       // Windows 10 v1607, Windows 10 v2004, Windows 11, Windows 10 v20H2
+        constant_iid =           0x5a,       // Windows 10 v1607, Windows 10 v2004, Windows 11, Windows 10 v20H2
+        end =                    0x5b,       // Windows 10 v1607, Windows 10 v2004, Windows 11, Windows 10 v20H2
+        pad =                    0x5c,       // Windows 10 v1607, Windows 10 v2004, Windows 11, Windows 10 v20H2
+        expr =                   0x5d,       // Windows 10 v1607, Windows 10 v2004, Windows 11, Windows 10 v20H2
+        partial_ignore_param =   0x5e,       // Windows 10 v1607, Windows 10 v2004, Windows 11, Windows 10 v20H2
+        split_dereference =      0x74,       // Windows 10 v1607, Windows 10 v2004, Windows 11, Windows 10 v20H2
+        split_div_2 =            0x75,       // Windows 10 v1607, Windows 10 v2004, Windows 11, Windows 10 v20H2
+        split_mult_2 =           0x76,       // Windows 10 v1607, Windows 10 v2004, Windows 11, Windows 10 v20H2
+        split_add_1 =            0x77,       // Windows 10 v1607, Windows 10 v2004, Windows 11, Windows 10 v20H2
+        split_sub_1 =            0x78,       // Windows 10 v1607, Windows 10 v2004, Windows 11, Windows 10 v20H2
+        split_callback =         0x79,       // Windows 10 v1607, Windows 10 v2004, Windows 11, Windows 10 v20H2
+        forced_bogus_struct =    0xb1,       // Windows 10 v1607, Windows 10 v2004, Windows 11, Windows 10 v20H2
+        transmit_as_ptr =        0xb2,       // Windows 10 v1607, Windows 10 v2004, Windows 11, Windows 10 v20H2
+        represent_as_ptr =       0xb3,       // Windows 10 v1607, Windows 10 v2004, Windows 11, Windows 10 v20H2
+        user_marshal =           0xb4,       // Windows 10 v1607, Windows 10 v2004, Windows 11, Windows 10 v20H2
+        pipe =                   0xb5,       // Windows 10 v1607, Windows 10 v2004, Windows 11, Windows 10 v20H2
+        supplement =             0xb6,       // Windows 10 v1607, Windows 10 v2004, Windows 11, Windows 10 v20H2
+        range =                  0xb7,       // Windows 10 v1607, Windows 10 v2004, Windows 11, Windows 10 v20H2
+        int3264 =                0xb8,       // Windows 10 v1607, Windows 10 v2004, Windows 11, Windows 10 v20H2
+        uint3264 =               0xb9,       // Windows 10 v1607, Windows 10 v2004, Windows 11, Windows 10 v20H2
+        csarray =                0xba,       // Windows 10 v1607, Windows 10 v2004, Windows 11, Windows 10 v20H2
+        cs_tag =                 0xbb,       // Windows 10 v1607, Windows 10 v2004, Windows 11, Windows 10 v20H2
+        structpadn =             0xbc,       // Windows 10 v1607, Windows 10 v2004, Windows 11, Windows 10 v20H2
+        unused7 =                0xbd,       // Windows 10 v1607, Windows 10 v2004, Windows 11, Windows 10 v20H2
+        unused8 =                0xbe,       // Windows 10 v1607, Windows 10 v2004, Windows 11, Windows 10 v20H2
+        unused9 =                0xbf,       // Windows 10 v1607, Windows 10 v2004, Windows 11, Windows 10 v20H2
+        unused10 =               0xc0,       // Windows 10 v1607, Windows 10 v2004, Windows 11, Windows 10 v20H2
+        buffer_align =           0xc1,       // Windows 10 v1607, Windows 10 v2004, Windows 11, Windows 10 v20H2
+        int128 =                 0xc2,       // Windows 10 v1607, Windows 10 v2004, Windows 11, Windows 10 v20H2
+        uint128 =                0xc3,       // Windows 10 v1607, Windows 10 v2004, Windows 11, Windows 10 v20H2
+        float80 =                0xc4,       // Windows 10 v1607, Windows 10 v2004, Windows 11, Windows 10 v20H2
+        float128 =               0xc5,       // Windows 10 v1607, Windows 10 v2004, Windows 11, Windows 10 v20H2
+        end_of_universe =        0xc6,       // Windows 10 v1607, Windows 10 v2004, Windows 11, Windows 10 v20H2
+    };                                     
+};
