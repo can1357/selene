@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Text Include="CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Includes">
+      <UniqueIdentifier>{ddf2f16a-bf5f-4b8c-867d-869c01b25509}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Library">
+      <UniqueIdentifier>{f805e489-1d44-43cc-ac59-b3d72afa6f2f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Includes\Events">
+      <UniqueIdentifier>{a88d8384-9171-41bb-8575-6f8fa94624dd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Includes\Analysis">
+      <UniqueIdentifier>{da3eafe1-e8ea-4a16-9992-e52e10aa2634}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="includes\xt\config.hpp">
+      <Filter>Includes</Filter>
+    </ClInclude>
+    <ClInclude Include="includes\xt\event.hpp">
+      <Filter>Includes\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="includes\xt\program_analysis.hpp">
+      <Filter>Includes\Analysis</Filter>
+    </ClInclude>
+    <ClInclude Include="includes\xt\event_graph.hpp">
+      <Filter>Includes\Events</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="tests.cpp" />
+    <ClCompile Include="lib\program_analysis.cpp">
+      <Filter>Library</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

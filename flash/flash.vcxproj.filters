@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="src\section.cpp">
+      <Filter>Flash\Image</Filter>
+    </ClCompile>
+    <ClCompile Include="src\image.cpp">
+      <Filter>Flash\Image</Filter>
+    </ClCompile>
+    <ClCompile Include="src\rule_instruction.cpp">
+      <Filter>Flash\Rules</Filter>
+    </ClCompile>
+    <ClCompile Include="src\interface.cpp">
+      <Filter>Flash\Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="src\rule_pattern.cpp">
+      <Filter>Flash\Rules</Filter>
+    </ClCompile>
+    <ClCompile Include="src\shellcode.cpp">
+      <Filter>Flash\Util</Filter>
+    </ClCompile>
+    <ClCompile Include="src\serializer.cpp">
+      <Filter>Flash\Format</Filter>
+    </ClCompile>
+    <ClCompile Include="src\dumper.cpp">
+      <Filter>Flash\Image</Filter>
+    </ClCompile>
+    <ClCompile Include="src\vcpu.cpp">
+      <Filter>Flash\Util</Filter>
+    </ClCompile>
+    <ClCompile Include="src\func_builder.cpp">
+      <Filter>Flash\Util</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Flash">
+      <UniqueIdentifier>{16e1ae8b-1c80-4e42-843f-13119ec92222}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Flash\Rules">
+      <UniqueIdentifier>{158c1e5a-1585-4fe9-ac10-8ff29a5b37db}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Flash\Image">
+      <UniqueIdentifier>{0a43e76c-40ae-481e-ae2d-7588babc6f97}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Flash\Engine">
+      <UniqueIdentifier>{7a4cd510-10a3-448c-880c-c6009625c1a3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Flash\Util">
+      <UniqueIdentifier>{8258603c-39d7-4c75-abef-ffcd6f1f5df4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Flash\Format">
+      <UniqueIdentifier>{e177b454-8d2a-4d63-a0ce-9389a9cd3d8f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Flash\Common">
+      <UniqueIdentifier>{5a84cf2f-85fc-4181-8953-3dc0bb02e2c9}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="includes\flash\rule_pattern.hpp">
+      <Filter>Flash\Rules</Filter>
+    </ClInclude>
+    <ClInclude Include="includes\flash\rule.hpp">
+      <Filter>Flash\Rules</Filter>
+    </ClInclude>
+    <ClInclude Include="includes\flash\section.hpp">
+      <Filter>Flash\Image</Filter>
+    </ClInclude>
+    <ClInclude Include="includes\flash\image.hpp">
+      <Filter>Flash\Image</Filter>
+    </ClInclude>
+    <ClInclude Include="includes\flash\rule_instruction.hpp">
+      <Filter>Flash\Rules</Filter>
+    </ClInclude>
+    <ClInclude Include="includes\flash\engine.hpp">
+      <Filter>Flash\Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="includes\flash\rule_filters.hpp">
+      <Filter>Flash\Rules</Filter>
+    </ClInclude>
+    <ClInclude Include="includes\flash\simd.hpp">
+      <Filter>Flash\Util</Filter>
+    </ClInclude>
+    <ClInclude Include="includes\flash\shellcode.hpp">
+      <Filter>Flash\Util</Filter>
+    </ClInclude>
+    <ClInclude Include="includes\flash\hex.hpp">
+      <Filter>Flash\Util</Filter>
+    </ClInclude>
+    <ClInclude Include="includes\flash\format.hpp">
+      <Filter>Flash\Format</Filter>
+    </ClInclude>
+    <ClInclude Include="includes\flash\dumper.hpp">
+      <Filter>Flash\Image</Filter>
+    </ClInclude>
+    <ClInclude Include="includes\flash\vcpu.hpp">
+      <Filter>Flash\Util</Filter>
+    </ClInclude>
+    <ClInclude Include="includes\flash\func_builder.hpp">
+      <Filter>Flash\Util</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

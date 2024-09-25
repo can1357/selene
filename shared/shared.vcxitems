@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Label="Globals">
+    <MSBuildAllProjects Condition="'$(MSBuildVersion)' == '' Or '$(MSBuildVersion)' &lt; '16.0'">$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <ItemsProjectGuid>{b4b0d0d7-9ed5-4253-868b-327de77639ed}</ItemsProjectGuid>
+    <ItemsProjectName>Shared</ItemsProjectName>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);$(MSBuildThisFileDirectory)</AdditionalIncludeDirectories>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ProjectCapability Include="SourceItemsFromImports" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="$(MSBuildThisFileDirectory)apollo\attributes.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)apollo\builtins.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)apollo\details\crt_syscall_hash.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)apollo\details\icon_writer.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)apollo\details\satella_pe.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)apollo\details\satella_linear.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)apollo\satella.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)apollo\server_string.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)apollo\server_string_def.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)apollo\vm_impl.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)asm\code_relocation.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)asm\pe_unwind.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)bus\stor.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)cfw\config.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)cfw\hid.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)cfw\library.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)cfw\tls.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)cfw\trapframe.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)cfw\vfs.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)leh.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)ntpp.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)ntpp\ci.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)ntpp\common.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)ntpp\enums.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)ntpp\etw.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)ntpp\import.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)ntpp\io.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)ntpp\memory.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)ntpp\ob.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)ntpp\reg.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)ntpp\sync.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)ntpp\trust.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)sdkgen\cv_builtins.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)sdkgen\common.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)sdkgen\integral_builtins.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)sdkgen\nt_builtins.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)sdkgen\runtime.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)sdkgen\support_library.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)sdkgen\symtable.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)tinyjit.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)wasm\common.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)wasm\descriptors.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)wasm\enums.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)wasm\image.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)wasm\llvm.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)wasm\vm.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)xstd_options.hpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="$(MSBuildThisFileDirectory)ntpp\ci.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)ntpp\io.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)ntpp\memory.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)ntpp\ob.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)ntpp\reg.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)ntpp\sync.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)ntpp\trust.cpp" />
+  </ItemGroup>
+</Project>

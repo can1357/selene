@@ -1,0 +1,10 @@
+Microsoft
+Intel 
+Advanced Micro Devices
+NVIDIA 
+Realtek
+Qualcomm
+NordVPN
+Dropbox
+Apple
+VMware

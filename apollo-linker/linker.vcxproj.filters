@@ -1,0 +1,157 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Transformations">
+      <UniqueIdentifier>{b42bb804-f22c-45f3-a029-9e60e8914fdc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Utility">
+      <UniqueIdentifier>{e36ff0c7-0b35-4b85-9f1b-5de46a6839e4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Object Format">
+      <UniqueIdentifier>{6b0d7317-f158-45e4-88f6-473c9a8ccfa5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Transformations\Bitcode">
+      <UniqueIdentifier>{5a070728-00cd-4de4-9bc6-2057d857f90b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Transformations\Native">
+      <UniqueIdentifier>{33acc90c-3d50-4d10-88d9-36d24b601a9a}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="linker.cpp" />
+    <ClCompile Include="object\collection.cpp">
+      <Filter>Object Format</Filter>
+    </ClCompile>
+    <ClCompile Include="object\comdat.cpp">
+      <Filter>Object Format</Filter>
+    </ClCompile>
+    <ClCompile Include="object\opt_ref.cpp">
+      <Filter>Object Format</Filter>
+    </ClCompile>
+    <ClCompile Include="object\primitives.cpp">
+      <Filter>Object Format</Filter>
+    </ClCompile>
+    <ClCompile Include="object\code_gen.cpp">
+      <Filter>Object Format</Filter>
+    </ClCompile>
+    <ClCompile Include="transform\lazy_import.cpp">
+      <Filter>Transformations\Bitcode</Filter>
+    </ClCompile>
+    <ClCompile Include="transform\mixed_bool_arith.cpp">
+      <Filter>Transformations\Bitcode</Filter>
+    </ClCompile>
+    <ClCompile Include="transform\attribute_discovery.cpp">
+      <Filter>Transformations\Bitcode</Filter>
+    </ClCompile>
+    <ClCompile Include="transform\attribute_normalization.cpp">
+      <Filter>Transformations\Bitcode</Filter>
+    </ClCompile>
+    <ClCompile Include="transform\split_basic_blocks.cpp">
+      <Filter>Transformations\Native</Filter>
+    </ClCompile>
+    <ClCompile Include="transform\virtualization.cpp">
+      <Filter>Transformations\Bitcode</Filter>
+    </ClCompile>
+    <ClCompile Include="transform\syscall_lifter.cpp">
+      <Filter>Transformations\Bitcode</Filter>
+    </ClCompile>
+    <ClCompile Include="transform\string_conversion.cpp">
+      <Filter>Transformations\Bitcode</Filter>
+    </ClCompile>
+    <ClCompile Include="transform\logo.cpp">
+      <Filter>Transformations\Native</Filter>
+    </ClCompile>
+    <ClCompile Include="transform\lower_xrefs.cpp">
+      <Filter>Transformations\Bitcode</Filter>
+    </ClCompile>
+    <ClCompile Include="transform\profiler.cpp">
+      <Filter>Transformations\Bitcode</Filter>
+    </ClCompile>
+    <ClCompile Include="transform\shadow_return.cpp">
+      <Filter>Transformations\Native</Filter>
+    </ClCompile>
+    <ClCompile Include="transform\cleanup.cpp">
+      <Filter>Transformations\Bitcode</Filter>
+    </ClCompile>
+    <ClCompile Include="transform\auto_mode_switch.cpp">
+      <Filter>Transformations\Bitcode</Filter>
+    </ClCompile>
+    <ClCompile Include="transform\dyn_relocs.cpp">
+      <Filter>Transformations\Bitcode</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="utility\pdb.hpp">
+      <Filter>Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="utility\liblto.hpp">
+      <Filter>Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="object\collection.hpp">
+      <Filter>Object Format</Filter>
+    </ClInclude>
+    <ClInclude Include="object\comdat.hpp">
+      <Filter>Object Format</Filter>
+    </ClInclude>
+    <ClInclude Include="object\reference_counting.hpp">
+      <Filter>Object Format</Filter>
+    </ClInclude>
+    <ClInclude Include="object\primitives.hpp">
+      <Filter>Object Format</Filter>
+    </ClInclude>
+    <ClInclude Include="utility\argparse.hpp">
+      <Filter>Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="transform\lazy_import.hpp">
+      <Filter>Transformations\Bitcode</Filter>
+    </ClInclude>
+    <ClInclude Include="transform\mixed_bool_arith.hpp">
+      <Filter>Transformations\Bitcode</Filter>
+    </ClInclude>
+    <ClInclude Include="transform\attribute_discovery.hpp">
+      <Filter>Transformations\Bitcode</Filter>
+    </ClInclude>
+    <ClInclude Include="transform\attribute_normalization.hpp">
+      <Filter>Transformations\Bitcode</Filter>
+    </ClInclude>
+    <ClInclude Include="transform\split_basic_blocks.hpp">
+      <Filter>Transformations\Native</Filter>
+    </ClInclude>
+    <ClInclude Include="transform\virtualization.hpp">
+      <Filter>Transformations\Bitcode</Filter>
+    </ClInclude>
+    <ClInclude Include="transform\syscall_lifter.hpp">
+      <Filter>Transformations\Bitcode</Filter>
+    </ClInclude>
+    <ClInclude Include="utility\llvm.hpp">
+      <Filter>Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="transform\string_conversion.hpp">
+      <Filter>Transformations\Bitcode</Filter>
+    </ClInclude>
+    <ClInclude Include="transform\logo.hpp">
+      <Filter>Transformations\Native</Filter>
+    </ClInclude>
+    <ClInclude Include="transform\lower_xrefs.hpp">
+      <Filter>Transformations\Bitcode</Filter>
+    </ClInclude>
+    <ClInclude Include="transform\profiler.hpp">
+      <Filter>Transformations\Bitcode</Filter>
+    </ClInclude>
+    <ClInclude Include="transform\shadow_return.hpp">
+      <Filter>Transformations\Native</Filter>
+    </ClInclude>
+    <ClInclude Include="transform\cleanup.hpp">
+      <Filter>Transformations\Bitcode</Filter>
+    </ClInclude>
+    <ClInclude Include="utility\undname.hpp">
+      <Filter>Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="transform\auto_mode_switch.hpp">
+      <Filter>Transformations\Bitcode</Filter>
+    </ClInclude>
+    <ClInclude Include="transform\dyn_relocs.hpp">
+      <Filter>Transformations\Bitcode</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

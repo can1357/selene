@@ -1,0 +1,35 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32127.271
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "flash", "flash.vcxproj", "{9065424F-D070-447D-AA36-01A34FBA1A19}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "xstd", "..\..\Libraries\xstd\xstd.vcxitems", "{022E6794-287F-4800-9932-7BFBBBEED679}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "uLua", "..\..\Libraries\uLua\ulua.vcxitems", "{B1F00C0E-862F-4172-A34B-99EB4FAF5229}"
+EndProject
+Global
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		..\..\Libraries\xstd\xstd.vcxitems*{022e6794-287f-4800-9932-7bfbbbeed679}*SharedItemsImports = 9
+		..\..\Libraries\uLua\ulua.vcxitems*{9065424f-d070-447d-aa36-01a34fba1a19}*SharedItemsImports = 4
+		..\..\Libraries\xstd\xstd.vcxitems*{9065424f-d070-447d-aa36-01a34fba1a19}*SharedItemsImports = 4
+		..\..\Libraries\uLua\ulua.vcxitems*{b1f00c0e-862f-4172-a34b-99eb4faf5229}*SharedItemsImports = 9
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9065424F-D070-447D-AA36-01A34FBA1A19}.Debug|x64.ActiveCfg = Debug|x64
+		{9065424F-D070-447D-AA36-01A34FBA1A19}.Debug|x64.Build.0 = Debug|x64
+		{9065424F-D070-447D-AA36-01A34FBA1A19}.Release|x64.ActiveCfg = Release|x64
+		{9065424F-D070-447D-AA36-01A34FBA1A19}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6CC83A18-DEB8-437E-A535-E07D629A4571}
+	EndGlobalSection
+EndGlobal

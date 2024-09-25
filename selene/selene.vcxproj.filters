@@ -1,0 +1,332 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="misc\nopg.cpp">
+      <Filter>Misc</Filter>
+    </ClCompile>
+    <ClCompile Include="crt.cpp" />
+    <ClCompile Include="hooks\patch_manager.cpp">
+      <Filter>Hooks</Filter>
+    </ClCompile>
+    <ClCompile Include="hooks\inline_hooks.cpp">
+      <Filter>Hooks</Filter>
+    </ClCompile>
+    <ClCompile Include="utility\memory.cpp">
+      <Filter>Utility</Filter>
+    </ClCompile>
+    <ClCompile Include="net\lwip.cpp">
+      <Filter>Networking</Filter>
+    </ClCompile>
+    <ClCompile Include="net\lwip_bridge.cpp">
+      <Filter>Networking</Filter>
+    </ClCompile>
+    <ClCompile Include="misc\pool.cpp">
+      <Filter>Misc</Filter>
+    </ClCompile>
+    <ClCompile Include="misc\crashdump.cpp">
+      <Filter>Misc</Filter>
+    </ClCompile>
+    <ClCompile Include="su\su0.cpp">
+      <Filter>Virtualization\Ring 0</Filter>
+    </ClCompile>
+    <ClCompile Include="su\mirror.cpp">
+      <Filter>Virtualization\Memory</Filter>
+    </ClCompile>
+    <ClCompile Include="su\monitor.cpp">
+      <Filter>Virtualization\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="su\emulation.cpp">
+      <Filter>Virtualization\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="misc\profiler.cpp">
+      <Filter>Misc</Filter>
+    </ClCompile>
+    <ClCompile Include="su\ext\vpmu.cpp">
+      <Filter>Virtualization\Extensions</Filter>
+    </ClCompile>
+    <ClCompile Include="su\ext\apiset.cpp">
+      <Filter>Virtualization\Extensions</Filter>
+    </ClCompile>
+    <ClCompile Include="su\mirrormm.cpp">
+      <Filter>Virtualization\Memory</Filter>
+    </ClCompile>
+    <ClCompile Include="utility\memory_isolation.cpp">
+      <Filter>Utility</Filter>
+    </ClCompile>
+    <ClCompile Include="utility\thread.cpp">
+      <Filter>Utility</Filter>
+    </ClCompile>
+    <ClCompile Include="su\kproxy.cpp">
+      <Filter>Virtualization\Ring 0</Filter>
+    </ClCompile>
+    <ClCompile Include="su\uproxy.cpp">
+      <Filter>Virtualization\Ring 3</Filter>
+    </ClCompile>
+    <ClCompile Include="su\su3.cpp">
+      <Filter>Virtualization\Ring 3</Filter>
+    </ClCompile>
+    <ClCompile Include="sched\irq.cpp">
+      <Filter>Scheduler</Filter>
+    </ClCompile>
+    <ClCompile Include="sched\passive.cpp">
+      <Filter>Scheduler</Filter>
+    </ClCompile>
+    <ClCompile Include="hooks\isr_hooks.cpp">
+      <Filter>Hooks</Filter>
+    </ClCompile>
+    <ClCompile Include="su\mitigations.cpp">
+      <Filter>Virtualization\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="misc\oswarden.cpp">
+      <Filter>Misc</Filter>
+    </ClCompile>
+    <ClCompile Include="misc\shellcode_dumper.cpp">
+      <Filter>Misc</Filter>
+    </ClCompile>
+    <ClCompile Include="gdb\stub.cpp">
+      <Filter>GDB</Filter>
+    </ClCompile>
+    <ClCompile Include="gdb\target.cpp">
+      <Filter>GDB</Filter>
+    </ClCompile>
+    <ClCompile Include="misc\ntdll_info.cpp">
+      <Filter>Misc</Filter>
+    </ClCompile>
+    <ClCompile Include="gdb\ce.cpp">
+      <Filter>GDB</Filter>
+    </ClCompile>
+    <ClCompile Include="clyde\tracker.cpp">
+      <Filter>Clyde</Filter>
+    </ClCompile>
+    <ClCompile Include="clyde\clyde.cpp">
+      <Filter>Clyde</Filter>
+    </ClCompile>
+    <ClCompile Include="clyde\mutator.cpp">
+      <Filter>Clyde</Filter>
+    </ClCompile>
+    <ClCompile Include="clyde\os.cpp">
+      <Filter>Clyde\Units</Filter>
+    </ClCompile>
+    <ClCompile Include="clyde\net.cpp">
+      <Filter>Clyde\Units</Filter>
+    </ClCompile>
+    <ClCompile Include="clyde\fw.cpp">
+      <Filter>Clyde\Units</Filter>
+    </ClCompile>
+    <ClCompile Include="clyde\disk.cpp">
+      <Filter>Clyde\Units</Filter>
+    </ClCompile>
+    <ClCompile Include="hooks\irp_hooks.cpp">
+      <Filter>Hooks</Filter>
+    </ClCompile>
+    <ClCompile Include="clyde\vol.cpp">
+      <Filter>Clyde\Units</Filter>
+    </ClCompile>
+    <ClCompile Include="misc\escape.cpp">
+      <Filter>Misc</Filter>
+    </ClCompile>
+    <ClCompile Include="su\vdbg.cpp">
+      <Filter>Virtualization\Extensions</Filter>
+    </ClCompile>
+    <ClCompile Include="hooks\sys_hooks.cpp">
+      <Filter>Hooks</Filter>
+    </ClCompile>
+    <ClCompile Include="su\plpd.cpp">
+      <Filter>Virtualization\Memory</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Utility">
+      <UniqueIdentifier>{d0929371-d868-4a83-bb18-bb625228dccb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc">
+      <UniqueIdentifier>{2ea5ef4b-9efb-4ba0-9787-c13b61090e10}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Hooks">
+      <UniqueIdentifier>{4ff9a911-3a1b-4891-949f-080ca4a55990}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Networking">
+      <UniqueIdentifier>{2e750a8c-a860-4f02-b7b2-ee64b8525df2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Virtualization">
+      <UniqueIdentifier>{8762a6c6-6c06-4375-9adc-a1e33b48bff5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Virtualization\Ring 0">
+      <UniqueIdentifier>{d7d88d79-a5a3-47c4-9ab0-04a77c28bbf5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Virtualization\Core">
+      <UniqueIdentifier>{3513a28a-aa62-4d40-a773-333145379711}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Virtualization\Memory">
+      <UniqueIdentifier>{1be50c17-cfa6-4fad-91cf-5477118f625e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Virtualization\Extensions">
+      <UniqueIdentifier>{808a86d5-6c24-4255-af9a-00a11f52a51d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Virtualization\Ring 3">
+      <UniqueIdentifier>{7f4bae09-cdc9-46bd-b4ee-8ed9d6b6f000}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Components">
+      <UniqueIdentifier>{a9da6d5f-d9ab-41e5-a561-a111f0b7a8a2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Scheduler">
+      <UniqueIdentifier>{589d17aa-fb38-4945-a16c-fa703fc89120}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GDB">
+      <UniqueIdentifier>{5e2ff1d8-e532-4bfa-b037-639dd3fc466b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Clyde">
+      <UniqueIdentifier>{969f9f13-bc2e-41bc-b94d-b0c82b5a403a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Clyde\Units">
+      <UniqueIdentifier>{02cd6e71-3a4c-4084-87d0-620253132cd0}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="utility\memory.hpp">
+      <Filter>Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="misc\nopg.hpp">
+      <Filter>Misc</Filter>
+    </ClInclude>
+    <ClInclude Include="hooks\patch_manager.hpp">
+      <Filter>Hooks</Filter>
+    </ClInclude>
+    <ClInclude Include="hooks\inline_hooks.hpp">
+      <Filter>Hooks</Filter>
+    </ClInclude>
+    <ClInclude Include="utility\apic.hpp">
+      <Filter>Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="utility\page_manager.hpp">
+      <Filter>Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="net\ndispp.hpp">
+      <Filter>Networking</Filter>
+    </ClInclude>
+    <ClInclude Include="net\layer_defs.hpp">
+      <Filter>Networking</Filter>
+    </ClInclude>
+    <ClInclude Include="net\lwip.hpp">
+      <Filter>Networking</Filter>
+    </ClInclude>
+    <ClInclude Include="net\lwip_bridge.hpp">
+      <Filter>Networking</Filter>
+    </ClInclude>
+    <ClInclude Include="misc\pool.hpp">
+      <Filter>Misc</Filter>
+    </ClInclude>
+    <ClInclude Include="misc\crashdump.hpp">
+      <Filter>Misc</Filter>
+    </ClInclude>
+    <ClInclude Include="su\su0.hpp">
+      <Filter>Virtualization\Ring 0</Filter>
+    </ClInclude>
+    <ClInclude Include="su\mirror.hpp">
+      <Filter>Virtualization\Memory</Filter>
+    </ClInclude>
+    <ClInclude Include="su\vm.hpp">
+      <Filter>Virtualization\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="su\trapframe.hpp">
+      <Filter>Virtualization\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="su\register_mask.hpp">
+      <Filter>Virtualization\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="misc\profiler.hpp">
+      <Filter>Misc</Filter>
+    </ClInclude>
+    <ClInclude Include="su\ext\vpmu.hpp">
+      <Filter>Virtualization\Extensions</Filter>
+    </ClInclude>
+    <ClInclude Include="su\xt.hpp">
+      <Filter>Virtualization\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="su\ext\apiset.hpp">
+      <Filter>Virtualization\Extensions</Filter>
+    </ClInclude>
+    <ClInclude Include="su\mirrormm.hpp">
+      <Filter>Virtualization\Memory</Filter>
+    </ClInclude>
+    <ClInclude Include="utility\memory_isolation.hpp">
+      <Filter>Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="utility\thread.hpp">
+      <Filter>Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="su\proxy.hpp">
+      <Filter>Virtualization\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="su\su3.hpp">
+      <Filter>Virtualization\Ring 3</Filter>
+    </ClInclude>
+    <ClInclude Include="sched\irq.hpp">
+      <Filter>Scheduler</Filter>
+    </ClInclude>
+    <ClInclude Include="sched\passive.hpp">
+      <Filter>Scheduler</Filter>
+    </ClInclude>
+    <ClInclude Include="hooks\isr_hooks.hpp">
+      <Filter>Hooks</Filter>
+    </ClInclude>
+    <ClInclude Include="su\mitigations.hpp">
+      <Filter>Virtualization\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="misc\oswarden.hpp">
+      <Filter>Misc</Filter>
+    </ClInclude>
+    <ClInclude Include="utility\safe_wrappers.hpp">
+      <Filter>Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="misc\shellcode_dumper.hpp">
+      <Filter>Misc</Filter>
+    </ClInclude>
+    <ClInclude Include="gdb\stub.hpp">
+      <Filter>GDB</Filter>
+    </ClInclude>
+    <ClInclude Include="gdb\target_desc.hpp">
+      <Filter>GDB</Filter>
+    </ClInclude>
+    <ClInclude Include="gdb\protocol.hpp">
+      <Filter>GDB</Filter>
+    </ClInclude>
+    <ClInclude Include="gdb\target.hpp">
+      <Filter>GDB</Filter>
+    </ClInclude>
+    <ClInclude Include="misc\dbglog.hpp">
+      <Filter>Misc</Filter>
+    </ClInclude>
+    <ClInclude Include="misc\ntdll_info.hpp">
+      <Filter>Misc</Filter>
+    </ClInclude>
+    <ClInclude Include="gdb\ce.hpp">
+      <Filter>GDB</Filter>
+    </ClInclude>
+    <ClInclude Include="clyde\clyde.hpp">
+      <Filter>Clyde</Filter>
+    </ClInclude>
+    <ClInclude Include="clyde\tracker.hpp">
+      <Filter>Clyde</Filter>
+    </ClInclude>
+    <ClInclude Include="clyde\mutator.hpp">
+      <Filter>Clyde</Filter>
+    </ClInclude>
+    <ClInclude Include="hooks\irp_hooks.hpp">
+      <Filter>Hooks</Filter>
+    </ClInclude>
+    <ClInclude Include="misc\escape.hpp">
+      <Filter>Misc</Filter>
+    </ClInclude>
+    <ClInclude Include="su\vdbg.hpp">
+      <Filter>Virtualization\Extensions</Filter>
+    </ClInclude>
+    <ClInclude Include="hooks\sys_hooks.hpp">
+      <Filter>Hooks</Filter>
+    </ClInclude>
+    <ClInclude Include="su\plpd.hpp">
+      <Filter>Virtualization\Memory</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

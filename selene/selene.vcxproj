@@ -1,0 +1,365 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug - LA57|x64">
+      <Configuration>Debug - LA57</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release LA57|x64">
+      <Configuration>Release LA57</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>16.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{ad253a0e-6993-4bb8-96da-05036897216d}</ProjectGuid>
+    <RootNamespace>selene</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>Apollo</PlatformToolset>
+    <WholeProgramOptimization>false</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release LA57|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>Apollo</PlatformToolset>
+    <WholeProgramOptimization>false</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>Apollo</PlatformToolset>
+    <WholeProgramOptimization>false</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug - LA57|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>Apollo</PlatformToolset>
+    <WholeProgramOptimization>false</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+    <Import Project="..\shared\shared.vcxitems" Label="Shared" />
+    <Import Project="..\..\Libraries\xstd\xstd.vcxitems" Label="Shared" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release LA57|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug - LA57|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <TargetExt>.sys</TargetExt>
+    <ExecutablePath>$(LLVM_PATH)\bin\;$(ExecutablePath)</ExecutablePath>
+    <IncludePath>$(CxxLibraries)\includes;$(CxxLibraries)xt\includes;$(CxxLibraries)lwip2\src\include;$(CxxLibraries)XED\Clang-NoLTO\XED\build\kit\include;$(CxxLibraries)xed++\include;$(CxxLibraries)rpmalloc\rpmalloc;$(CxxLibraries)zstd\lib;$(CxxLibraries)MiniCRT\includes;$(SeleneRoot)vmware-rpc\includes;$(CxxLibraries)linux-pe\includes;$(SeleneRoot)resources;$(LLVM_PATH)\lib\clang\12.0.0\include;$(VC_IncludePath);$(WindowsSDK_IncludePath)</IncludePath>
+    <ApolloModuleType>kernel</ApolloModuleType>
+    <ApolloBuildType>prod</ApolloBuildType>
+    <ApolloObfuscationLevel>0</ApolloObfuscationLevel>
+    <ApolloLLVMVerify>yes</ApolloLLVMVerify>
+    <ApolloLLVMSave>no</ApolloLLVMSave>
+    <ApolloLTOSaveTmp>no</ApolloLTOSaveTmp>
+    <ApolloInstrumentation>no</ApolloInstrumentation>
+    <ApolloProductId>kernel</ApolloProductId>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release LA57|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <TargetExt>.sys</TargetExt>
+    <ExecutablePath>$(LLVM_PATH)\bin\;$(ExecutablePath)</ExecutablePath>
+    <IncludePath>$(CxxLibraries)\includes;$(CxxLibraries)xt\includes;$(CxxLibraries)lwip2\src\include;$(CxxLibraries)XED\Clang-NoLTO\XED\build\kit\include;$(CxxLibraries)xed++\include;$(CxxLibraries)rpmalloc\rpmalloc;$(CxxLibraries)zstd\lib;$(CxxLibraries)MiniCRT\includes;$(SeleneRoot)vmware-rpc\includes;$(CxxLibraries)linux-pe\includes;$(SeleneRoot)resources;$(LLVM_PATH)\lib\clang\12.0.0\include;$(VC_IncludePath);$(WindowsSDK_IncludePath)</IncludePath>
+    <ApolloModuleType>kernel</ApolloModuleType>
+    <ApolloBuildType>prod</ApolloBuildType>
+    <ApolloObfuscationLevel>2</ApolloObfuscationLevel>
+    <ApolloLLVMVerify>yes</ApolloLLVMVerify>
+    <ApolloLLVMSave>no</ApolloLLVMSave>
+    <ApolloLTOSaveTmp>no</ApolloLTOSaveTmp>
+    <TargetName>$(ProjectName)la57</TargetName>
+    <ApolloInstrumentation>no</ApolloInstrumentation>
+    <ApolloProductId>kernel</ApolloProductId>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <TargetExt>.sys</TargetExt>
+    <ExecutablePath>$(LLVM_PATH)\bin\;$(ExecutablePath)</ExecutablePath>
+    <IncludePath>$(CxxLibraries)\includes;$(CxxLibraries)xt\includes;$(CxxLibraries)lwip2\src\include;$(CxxLibraries)XED\Clang-NoLTO\XED\build\kit\include;$(CxxLibraries)xed++\include;$(CxxLibraries)rpmalloc\rpmalloc;$(CxxLibraries)zstd\lib;$(CxxLibraries)MiniCRT\includes;$(SeleneRoot)vmware-rpc\includes;$(CxxLibraries)linux-pe\includes;$(SeleneRoot)resources;$(LLVM_PATH)\lib\clang\12.0.0\include;$(VC_IncludePath);$(WindowsSDK_IncludePath)</IncludePath>
+    <ApolloModuleType>kernel</ApolloModuleType>
+    <ApolloBuildType>dev</ApolloBuildType>
+    <ApolloObfuscationLevel>0</ApolloObfuscationLevel>
+    <ApolloLLVMVerify>yes</ApolloLLVMVerify>
+    <ApolloLLVMSave>no</ApolloLLVMSave>
+    <ApolloLTOSaveTmp>yes</ApolloLTOSaveTmp>
+    <ApolloInstrumentation>no</ApolloInstrumentation>
+    <ApolloProductId>kernel</ApolloProductId>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug - LA57|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <TargetExt>.sys</TargetExt>
+    <ExecutablePath>$(LLVM_PATH)\bin\;$(ExecutablePath)</ExecutablePath>
+    <IncludePath>$(CxxLibraries)\includes;$(CxxLibraries)xt\includes;$(CxxLibraries)lwip2\src\include;$(CxxLibraries)XED\Clang-NoLTO\XED\build\kit\include;$(CxxLibraries)xed++\include;$(CxxLibraries)rpmalloc\rpmalloc;$(CxxLibraries)zstd\lib;$(CxxLibraries)MiniCRT\includes;$(SeleneRoot)vmware-rpc\includes;$(CxxLibraries)linux-pe\includes;$(SeleneRoot)resources;$(LLVM_PATH)\lib\clang\12.0.0\include;$(VC_IncludePath);$(WindowsSDK_IncludePath)</IncludePath>
+    <ApolloModuleType>kernel</ApolloModuleType>
+    <ApolloBuildType>dev</ApolloBuildType>
+    <ApolloObfuscationLevel>0</ApolloObfuscationLevel>
+    <ApolloLLVMVerify>yes</ApolloLLVMVerify>
+    <ApolloLLVMSave>no</ApolloLLVMSave>
+    <ApolloLTOSaveTmp>yes</ApolloLTOSaveTmp>
+    <TargetName>$(ProjectName)la57</TargetName>
+    <ApolloInstrumentation>no</ApolloInstrumentation>
+    <ApolloProductId>kernel</ApolloProductId>
+  </PropertyGroup>
+  <PropertyGroup Label="Vcpkg">
+    <VcpkgEnabled>false</VcpkgEnabled>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>PROD_BUILD=1;_SELENE_;_KERNEL_MODE;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <DebugInformationFormat>OldStyle</DebugInformationFormat>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <ExceptionHandling>false</ExceptionHandling>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <ControlFlowGuard>false</ControlFlowGuard>
+      <EnableEnhancedInstructionSet>AdvancedVectorExtensions2</EnableEnhancedInstructionSet>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
+      <ForcedIncludeFiles>$(SolutionDir)..\shared\xstd_options.hpp;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <OmitDefaultLibName>true</OmitDefaultLibName>
+      <AdditionalOptions> -flto /Zc:threadSafeInit- /Gw /Gy -Xclang -fno-rtti-data -fwhole-program-vtables -gline-tables-only -W -Wmost -Wno-c++98-compat -Wlarge-by-value-copy -Wno-address-of-packed-member</AdditionalOptions>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <ObjectFileName>$(IntDir)\%(Directory)</ObjectFileName>
+    </ClCompile>
+    <Link>
+      <SubSystem>Native</SubSystem>
+      <EnableCOMDATFolding>false</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>$(CxxLibraries)rpmalloc\lib\windows\release\x86-64\rpmalloc.lib;$(CxxLibraries)lwip2\x64\Release\lwip.lib;$(CxxLibraries)XED\Clang-NoLTO\XED\build\kit\lib\xed.lib;$(CxxLibraries)MiniCRT\fp.lib;$(CxxLibraries)zstd\build\VS2010\bin\Release\libzstd_static.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <EntryPointSymbol>entry_point</EntryPointSymbol>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release LA57|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>XSTD_IA32_LA57=1;_SELENE_;_KERNEL_MODE;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <DebugInformationFormat>OldStyle</DebugInformationFormat>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <ExceptionHandling>false</ExceptionHandling>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <ControlFlowGuard>false</ControlFlowGuard>
+      <EnableEnhancedInstructionSet>AdvancedVectorExtensions2</EnableEnhancedInstructionSet>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
+      <ForcedIncludeFiles>$(SolutionDir)..\shared\xstd_options.hpp;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <OmitDefaultLibName>true</OmitDefaultLibName>
+      <AdditionalOptions> -flto /Zc:threadSafeInit- /Gw /Gy -Xclang -fno-rtti-data -fwhole-program-vtables -gline-tables-only -W -Wmost -Wno-c++98-compat -Wlarge-by-value-copy -Wno-address-of-packed-member</AdditionalOptions>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <ObjectFileName>$(IntDir)\%(Directory)</ObjectFileName>
+    </ClCompile>
+    <Link>
+      <SubSystem>Native</SubSystem>
+      <EnableCOMDATFolding>false</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>$(CxxLibraries)rpmalloc\lib\windows\release\x86-64\rpmalloc.lib;$(CxxLibraries)lwip2\x64\Release\lwip.lib;$(CxxLibraries)XED\Clang-NoLTO\XED\build\kit\lib\xed.lib;$(CxxLibraries)MiniCRT\fp.lib;$(CxxLibraries)zstd\build\VS2010\bin\Release\libzstd_static.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <EntryPointSymbol>entry_point</EntryPointSymbol>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_SELENE_;_KERNEL_MODE;DEBUG_BUILD=1;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <DebugInformationFormat>OldStyle</DebugInformationFormat>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <ExceptionHandling>false</ExceptionHandling>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <ControlFlowGuard>false</ControlFlowGuard>
+      <EnableEnhancedInstructionSet>AdvancedVectorExtensions2</EnableEnhancedInstructionSet>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
+      <ForcedIncludeFiles>$(SolutionDir)..\shared\xstd_options.hpp;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <OmitDefaultLibName>true</OmitDefaultLibName>
+      <AdditionalOptions> -flto /Zc:threadSafeInit- /Gw /Gy -Xclang -fno-rtti-data -fwhole-program-vtables -gline-tables-only -W -Wmost -Wno-c++98-compat -Wlarge-by-value-copy -Wno-address-of-packed-member</AdditionalOptions>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <Optimization>MaxSpeed</Optimization>
+      <ObjectFileName>$(IntDir)\%(Directory)</ObjectFileName>
+    </ClCompile>
+    <Link>
+      <SubSystem>Native</SubSystem>
+      <EnableCOMDATFolding>false</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>$(CxxLibraries)\x64\Debug\.lib;$(CxxLibraries)rpmalloc\lib\windows\debug\x86-64\rpmalloc.lib;$(CxxLibraries)lwip2\x64\Release\lwip.lib;$(CxxLibraries)XED\Clang-NoLTO\XED\build\kit\lib\xed.lib;$(CxxLibraries)MiniCRT\fp.lib;$(CxxLibraries)zstd\build\VS2010\bin\Release\libzstd_static.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <EntryPointSymbol>entry_point</EntryPointSymbol>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug - LA57|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>XSTD_IA32_LA57=1;_SELENE_;_KERNEL_MODE;DEBUG_BUILD=1;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <DebugInformationFormat>OldStyle</DebugInformationFormat>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <ExceptionHandling>false</ExceptionHandling>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <ControlFlowGuard>false</ControlFlowGuard>
+      <EnableEnhancedInstructionSet>AdvancedVectorExtensions2</EnableEnhancedInstructionSet>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
+      <ForcedIncludeFiles>$(SolutionDir)..\shared\xstd_options.hpp;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <OmitDefaultLibName>true</OmitDefaultLibName>
+      <AdditionalOptions> -flto /Zc:threadSafeInit- /Gw /Gy -Xclang -fno-rtti-data -fwhole-program-vtables -gline-tables-only -W -Wmost -Wno-c++98-compat -Wlarge-by-value-copy -Wno-address-of-packed-member</AdditionalOptions>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <Optimization>MaxSpeed</Optimization>
+      <ObjectFileName>$(IntDir)\%(Directory)</ObjectFileName>
+    </ClCompile>
+    <Link>
+      <SubSystem>Native</SubSystem>
+      <EnableCOMDATFolding>false</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>$(CxxLibraries)\x64\Debug\.lib;$(CxxLibraries)rpmalloc\lib\windows\debug\x86-64\rpmalloc.lib;$(CxxLibraries)lwip2\x64\Release\lwip.lib;$(CxxLibraries)XED\Clang-NoLTO\XED\build\kit\lib\xed.lib;$(CxxLibraries)MiniCRT\fp.lib;$(CxxLibraries)zstd\build\VS2010\bin\Release\libzstd_static.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <EntryPointSymbol>entry_point</EntryPointSymbol>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="crt.cpp" />
+    <ClCompile Include="gdb\ce.cpp" />
+    <ClCompile Include="gdb\stub.cpp" />
+    <ClCompile Include="gdb\target.cpp" />
+    <ClCompile Include="hooks\inline_hooks.cpp" />
+    <ClCompile Include="hooks\irp_hooks.cpp" />
+    <ClCompile Include="hooks\isr_hooks.cpp" />
+    <ClCompile Include="hooks\patch_manager.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="misc\crashdump.cpp" />
+    <ClCompile Include="misc\escape.cpp" />
+    <ClCompile Include="misc\ntdll_info.cpp" />
+    <ClCompile Include="misc\oswarden.cpp" />
+    <ClCompile Include="misc\pool.cpp" />
+    <ClCompile Include="misc\nopg.cpp" />
+    <ClCompile Include="misc\profiler.cpp" />
+    <ClCompile Include="misc\shellcode_dumper.cpp" />
+    <ClCompile Include="net\lwip.cpp" />
+    <ClCompile Include="net\lwip_bridge.cpp" />
+    <ClCompile Include="sched\irq.cpp" />
+    <ClCompile Include="sched\passive.cpp" />
+    <ClCompile Include="su\ext\apiset.cpp" />
+    <ClCompile Include="su\ext\vpmu.cpp" />
+    <ClCompile Include="su\mirror.cpp" />
+    <ClCompile Include="su\mirrormm.cpp" />
+    <ClCompile Include="su\kproxy.cpp" />
+    <ClCompile Include="su\mitigations.cpp" />
+    <ClCompile Include="su\plpd.cpp" />
+    <ClCompile Include="su\vdbg.cpp" />
+    <ClCompile Include="su\su0.cpp" />
+    <ClCompile Include="su\emulation.cpp" />
+    <ClCompile Include="su\monitor.cpp" />
+    <ClCompile Include="su\su3.cpp" />
+    <ClCompile Include="su\uproxy.cpp" />
+    <ClCompile Include="utility\memory.cpp" />
+    <ClCompile Include="utility\memory_isolation.cpp" />
+    <ClCompile Include="utility\thread.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Libraries\MiniCRT\MiniCRT.vcxproj">
+      <Project>{310cebde-8d02-4bf9-b9cf-6a51cdbd3791}</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="gdb\ce.hpp" />
+    <ClInclude Include="gdb\protocol.hpp" />
+    <ClInclude Include="gdb\stub.hpp" />
+    <ClInclude Include="gdb\target_desc.hpp" />
+    <ClInclude Include="gdb\target.hpp" />
+    <ClInclude Include="hooks\inline_hooks.hpp" />
+    <ClInclude Include="hooks\irp_hooks.hpp" />
+    <ClInclude Include="hooks\isr_hooks.hpp" />
+    <ClInclude Include="hooks\patch_manager.hpp" />
+    <ClInclude Include="misc\crashdump.hpp" />
+    <ClInclude Include="misc\dbglog.hpp" />
+    <ClInclude Include="misc\escape.hpp" />
+    <ClInclude Include="misc\ntdll_info.hpp" />
+    <ClInclude Include="misc\oswarden.hpp" />
+    <ClInclude Include="misc\profiler.hpp" />
+    <ClInclude Include="misc\pool.hpp" />
+    <ClInclude Include="misc\nopg.hpp" />
+    <ClInclude Include="misc\shellcode_dumper.hpp" />
+    <ClInclude Include="net\layer_defs.hpp" />
+    <ClInclude Include="net\lwip.hpp" />
+    <ClInclude Include="net\lwip_bridge.hpp" />
+    <ClInclude Include="net\ndispp.hpp" />
+    <ClInclude Include="sched\irq.hpp" />
+    <ClInclude Include="sched\passive.hpp" />
+    <ClInclude Include="su\ext\apiset.hpp" />
+    <ClInclude Include="su\ext\vpmu.hpp" />
+    <ClInclude Include="su\mirror.hpp" />
+    <ClInclude Include="su\mirrormm.hpp" />
+    <ClInclude Include="su\mitigations.hpp" />
+    <ClInclude Include="su\plpd.hpp" />
+    <ClInclude Include="su\proxy.hpp" />
+    <ClInclude Include="su\vdbg.hpp" />
+    <ClInclude Include="su\register_mask.hpp" />
+    <ClInclude Include="su\su0.hpp" />
+    <ClInclude Include="su\su3.hpp" />
+    <ClInclude Include="su\trapframe.hpp" />
+    <ClInclude Include="su\vm.hpp" />
+    <ClInclude Include="su\xt.hpp" />
+    <ClInclude Include="utility\apic.hpp" />
+    <ClInclude Include="utility\memory.hpp" />
+    <ClInclude Include="utility\memory_isolation.hpp" />
+    <ClInclude Include="utility\page_manager.hpp" />
+    <ClInclude Include="utility\safe_wrappers.hpp" />
+    <ClInclude Include="utility\thread.hpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

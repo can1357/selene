@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>16.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{9065424f-d070-447d-aa36-01a34fba1a19}</ProjectGuid>
+    <RootNamespace>flash</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>ClangCL</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>ClangCL</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+    <Import Project="..\..\Libraries\xstd\xstd.vcxitems" Label="Shared" />
+    <Import Project="..\..\Libraries\uLua\ulua.vcxitems" Label="Shared" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <ExecutablePath>$(LLVMInstallDir)\bin;$(ExecutablePath)</ExecutablePath>
+    <IncludePath>$(ProjectDir)includes;$(CxxLibraries)linux-pe\includes;$(CxxLibraries)xed++\include;$(CxxLibraries)XED\Clang-NoLTO\XED\build\kit\include;$(CxxLibraries)LuaJIT-UM\src;$(VC_IncludePath);$(WindowsSDK_IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <ExecutablePath>$(LLVMInstallDir)\bin;$(ExecutablePath)</ExecutablePath>
+    <IncludePath>$(ProjectDir)includes;$(CxxLibraries)linux-pe\includes;$(CxxLibraries)xed++\include;$(CxxLibraries)XED\Clang-NoLTO\XED\build\kit\include;$(CxxLibraries)LuaJIT-UM\src;$(VC_IncludePath);$(WindowsSDK_IncludePath)</IncludePath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_HAS_EXCEPTIONS=0;_CRT_SECURE_NO_WARNINGS;_CRT_USE_BUILTIN_OFFSETOF;_HAS_CXX23=1;__private_binary__;_UNICODE;UNICODE;_CONSOLE</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <Optimization>MaxSpeed</Optimization>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <ExceptionHandling>false</ExceptionHandling>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <ControlFlowGuard>false</ControlFlowGuard>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <EnableEnhancedInstructionSet>AdvancedVectorExtensions2</EnableEnhancedInstructionSet>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
+      <AdditionalOptions> -flto /Zc:threadSafeInit- /Gw /Gy -Xclang -fno-rtti-data -gline-tables-only -W -Wmost -Wno-c++98-compat -fwhole-program-vtables -Wno-unused-parameter %(AdditionalOptions)</AdditionalOptions>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>$(CxxLibraries)LuaJIT-UM\x64\Release\LuaJIT.lib;$(CxxLibraries)XED\Clang-NoLTO\XED\build\kit\lib\xed.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_HAS_EXCEPTIONS=0;_CRT_SECURE_NO_WARNINGS;_CRT_USE_BUILTIN_OFFSETOF;_HAS_CXX23=1;__private_binary__;_UNICODE;UNICODE;_CONSOLE</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <ExceptionHandling>false</ExceptionHandling>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <ControlFlowGuard>false</ControlFlowGuard>
+      <EnableEnhancedInstructionSet>AdvancedVectorExtensions2</EnableEnhancedInstructionSet>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
+      <AdditionalOptions> -flto /Zc:threadSafeInit- /Gw /Gy -Xclang -fno-rtti-data -gline-tables-only -W -Wmost -Wno-c++98-compat -fwhole-program-vtables %(AdditionalOptions)</AdditionalOptions>
+      <BuildStlModules>false</BuildStlModules>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>$(CxxLibraries)LuaJIT-UM\x64\Release - No LTO\LuaJIT.lib;$(CxxLibraries)XED\Clang-NoLTO\XED\build\kit\lib\xed.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <PostBuildEvent>
+      <Command>copy "$(TargetPath)" "$(ApolloMDir)..\flash.exe"</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="src\dumper.cpp" />
+    <ClCompile Include="src\func_builder.cpp" />
+    <ClCompile Include="src\interface.cpp" />
+    <ClCompile Include="src\image.cpp" />
+    <ClCompile Include="src\rule_instruction.cpp" />
+    <ClCompile Include="src\rule_pattern.cpp" />
+    <ClCompile Include="src\section.cpp" />
+    <ClCompile Include="src\serializer.cpp" />
+    <ClCompile Include="src\shellcode.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="src\vcpu.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="includes\flash\dumper.hpp" />
+    <ClInclude Include="includes\flash\engine.hpp" />
+    <ClInclude Include="includes\flash\format.hpp" />
+    <ClInclude Include="includes\flash\func_builder.hpp" />
+    <ClInclude Include="includes\flash\hex.hpp" />
+    <ClInclude Include="includes\flash\image.hpp" />
+    <ClInclude Include="includes\flash\rule.hpp" />
+    <ClInclude Include="includes\flash\rule_filters.hpp" />
+    <ClInclude Include="includes\flash\rule_instruction.hpp" />
+    <ClInclude Include="includes\flash\rule_pattern.hpp" />
+    <ClInclude Include="includes\flash\section.hpp" />
+    <ClInclude Include="includes\flash\shellcode.hpp" />
+    <ClInclude Include="includes\flash\simd.hpp" />
+    <ClInclude Include="includes\flash\vcpu.hpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

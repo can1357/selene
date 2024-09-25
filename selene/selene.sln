@@ -1,0 +1,51 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.31911.260
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "selene", "selene.vcxproj", "{AD253A0E-6993-4BB8-96DA-05036897216D}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MiniCRT", "..\..\Libraries\MiniCRT\MiniCRT.vcxproj", "{310CEBDE-8D02-4BF9-B9CF-6A51CDBD3791}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Shared", "..\shared\shared.vcxitems", "{B4B0D0D7-9ED5-4253-868B-327DE77639ED}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "xstd", "..\..\Libraries\xstd\xstd.vcxitems", "{022E6794-287F-4800-9932-7BFBBBEED679}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug - LA57|x64 = Debug - LA57|x64
+		Debug|x64 = Debug|x64
+		Release - LA57|x64 = Release - LA57|x64
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AD253A0E-6993-4BB8-96DA-05036897216D}.Debug - LA57|x64.ActiveCfg = Debug - LA57|x64
+		{AD253A0E-6993-4BB8-96DA-05036897216D}.Debug - LA57|x64.Build.0 = Debug - LA57|x64
+		{AD253A0E-6993-4BB8-96DA-05036897216D}.Debug|x64.ActiveCfg = Debug|x64
+		{AD253A0E-6993-4BB8-96DA-05036897216D}.Debug|x64.Build.0 = Debug|x64
+		{AD253A0E-6993-4BB8-96DA-05036897216D}.Release - LA57|x64.ActiveCfg = Release LA57|x64
+		{AD253A0E-6993-4BB8-96DA-05036897216D}.Release - LA57|x64.Build.0 = Release LA57|x64
+		{AD253A0E-6993-4BB8-96DA-05036897216D}.Release|x64.ActiveCfg = Release|x64
+		{AD253A0E-6993-4BB8-96DA-05036897216D}.Release|x64.Build.0 = Release|x64
+		{310CEBDE-8D02-4BF9-B9CF-6A51CDBD3791}.Debug - LA57|x64.ActiveCfg = Debug-Kernel-NoExit|x64
+		{310CEBDE-8D02-4BF9-B9CF-6A51CDBD3791}.Debug - LA57|x64.Build.0 = Debug-Kernel-NoExit|x64
+		{310CEBDE-8D02-4BF9-B9CF-6A51CDBD3791}.Debug|x64.ActiveCfg = Debug-Kernel-NoExit|x64
+		{310CEBDE-8D02-4BF9-B9CF-6A51CDBD3791}.Debug|x64.Build.0 = Debug-Kernel-NoExit|x64
+		{310CEBDE-8D02-4BF9-B9CF-6A51CDBD3791}.Release - LA57|x64.ActiveCfg = Release-Kernel-NoExit|x64
+		{310CEBDE-8D02-4BF9-B9CF-6A51CDBD3791}.Release - LA57|x64.Build.0 = Release-Kernel-NoExit|x64
+		{310CEBDE-8D02-4BF9-B9CF-6A51CDBD3791}.Release|x64.ActiveCfg = Release-Kernel-NoExit|x64
+		{310CEBDE-8D02-4BF9-B9CF-6A51CDBD3791}.Release|x64.Build.0 = Release-Kernel-NoExit|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1E908030-4BED-425A-84A9-8DFB7E458DE7}
+	EndGlobalSection
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		..\..\Libraries\xstd\xstd.vcxitems*{022e6794-287f-4800-9932-7bfbbbeed679}*SharedItemsImports = 9
+		..\shared\shared.vcxitems*{ad253a0e-6993-4bb8-96da-05036897216d}*SharedItemsImports = 4
+		..\..\Libraries\xstd\xstd.vcxitems*{ad253a0e-6993-4bb8-96da-05036897216d}*SharedItemsImports = 4
+		..\shared\shared.vcxitems*{b4b0d0d7-9ed5-4253-868b-327de77639ed}*SharedItemsImports = 9
+	EndGlobalSection
+EndGlobal

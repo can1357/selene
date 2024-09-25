@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Includes">
+      <UniqueIdentifier>{e505ee0d-a104-4282-851a-9ee7c2be25da}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="includes\pdblib\pdb.hpp">
+      <Filter>Includes</Filter>
+    </ClInclude>
+    <ClInclude Include="includes\pdblib\cvconsts.h">
+      <Filter>Includes</Filter>
+    </ClInclude>
+    <ClInclude Include="includes\pdblib\cvinfo.h">
+      <Filter>Includes</Filter>
+    </ClInclude>
+    <ClInclude Include="includes\pdblib\dbi.hpp">
+      <Filter>Includes</Filter>
+    </ClInclude>
+    <ClInclude Include="includes\pdblib\msf.hpp">
+      <Filter>Includes</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="CMakeLists.txt" />
+  </ItemGroup>
+</Project>

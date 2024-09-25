@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Apollo">
+      <UniqueIdentifier>{7d224196-020d-4467-bdb1-950d216d8e80}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Sdk Generator">
+      <UniqueIdentifier>{fc86bd53-bf9d-43ff-9de7-9235a2602770}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Nt++">
+      <UniqueIdentifier>{999be0c3-f9ab-4842-b280-608fa611b23a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Analysis">
+      <UniqueIdentifier>{7961a01f-699f-49e0-887d-098480aade13}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Apollo\WASM">
+      <UniqueIdentifier>{6661b12d-5cd7-4a98-9a74-7f67526c7c9b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Apollo\Satella">
+      <UniqueIdentifier>{0feea6c3-cc6a-474e-a4fd-570c1f4028eb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Framework">
+      <UniqueIdentifier>{183bf1ab-1b58-4fd9-90e1-8ba65850b7c5}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="$(MSBuildThisFileDirectory)apollo\attributes.hpp">
+      <Filter>Apollo</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)apollo\server_string.hpp">
+      <Filter>Apollo</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)sdkgen\support_library.hpp">
+      <Filter>Sdk Generator</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)xstd_options.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)apollo\vm_impl.hpp">
+      <Filter>Apollo</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)apollo\server_string_def.hpp">
+      <Filter>Apollo</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)ntpp.hpp">
+      <Filter>Nt++</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)ntpp\enums.hpp">
+      <Filter>Nt++</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)apollo\builtins.hpp">
+      <Filter>Apollo</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)asm\code_relocation.hpp">
+      <Filter>Analysis</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)asm\pe_unwind.hpp">
+      <Filter>Analysis</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)ntpp\trust.hpp">
+      <Filter>Nt++</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)ntpp\ci.hpp">
+      <Filter>Nt++</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)leh.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)wasm\common.hpp">
+      <Filter>Apollo\WASM</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)wasm\descriptors.hpp">
+      <Filter>Apollo\WASM</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)wasm\enums.hpp">
+      <Filter>Apollo\WASM</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)wasm\image.hpp">
+      <Filter>Apollo\WASM</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)wasm\llvm.hpp">
+      <Filter>Apollo\WASM</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)wasm\vm.hpp">
+      <Filter>Apollo\WASM</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)apollo\details\satella_pe.hpp">
+      <Filter>Apollo\Satella</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)apollo\details\satella_linear.hpp">
+      <Filter>Apollo\Satella</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)apollo\satella.hpp">
+      <Filter>Apollo\Satella</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)cfw\vfs.hpp">
+      <Filter>Framework</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)cfw\config.hpp">
+      <Filter>Framework</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)cfw\library.hpp">
+      <Filter>Framework</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)cfw\tls.hpp">
+      <Filter>Framework</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)cfw\trapframe.hpp">
+      <Filter>Framework</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)apollo\details\crt_syscall_hash.hpp">
+      <Filter>Apollo</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)ntpp\import.hpp">
+      <Filter>Nt++</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)tinyjit.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)sdkgen\cv_builtins.hpp">
+      <Filter>Sdk Generator</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)sdkgen\integral_builtins.hpp">
+      <Filter>Sdk Generator</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)sdkgen\common.hpp">
+      <Filter>Sdk Generator</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)sdkgen\nt_builtins.hpp">
+      <Filter>Sdk Generator</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)sdkgen\runtime.hpp">
+      <Filter>Sdk Generator</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)sdkgen\symtable.hpp">
+      <Filter>Sdk Generator</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)cfw\hid.hpp">
+      <Filter>Framework</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)apollo\details\icon_writer.hpp">
+      <Filter>Apollo\Satella</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)bus\stor.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)ntpp\common.hpp">
+      <Filter>Nt++</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)ntpp\ob.hpp">
+      <Filter>Nt++</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)ntpp\sync.hpp">
+      <Filter>Nt++</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)ntpp\memory.hpp">
+      <Filter>Nt++</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)ntpp\reg.hpp">
+      <Filter>Nt++</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)ntpp\io.hpp">
+      <Filter>Nt++</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)ntpp\etw.hpp">
+      <Filter>Nt++</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="$(MSBuildThisFileDirectory)ntpp\ob.cpp">
+      <Filter>Nt++</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)ntpp\sync.cpp">
+      <Filter>Nt++</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)ntpp\memory.cpp">
+      <Filter>Nt++</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)ntpp\reg.cpp">
+      <Filter>Nt++</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)ntpp\io.cpp">
+      <Filter>Nt++</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)ntpp\ci.cpp">
+      <Filter>Nt++</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)ntpp\trust.cpp">
+      <Filter>Nt++</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>
