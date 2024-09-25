@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+
+<Rule Name="Apollo" PageTemplate="generic" DisplayName="Apollo" SwitchPrefix="/" xmlns="http://schemas.microsoft.com/build/2009/properties" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:sys="clr-namespace:System;assembly=mscorlib">
+  <Rule.DataSource>
+    <DataSource Persistence="ProjectFile" HasConfigurationCondition="True" />
+  </Rule.DataSource>
+  
+  <!-- Module type -->
+  <EnumProperty Name="ApolloModuleType" DisplayName="Module Type" Visible="True">
+	<EnumValue Name="loader" DisplayName="Usermode Bootstrapper" Switch="type:loader" />
+	<EnumValue Name="kernel" DisplayName="Supervising Microkernel" Switch="type:kernel" />
+	<EnumValue Name="host" DisplayName="Component Host" Switch="type:host" />
+	<EnumValue Name="dynamic" DisplayName="Dynamic Component" Switch="type:dynamic" />
+	
+    <EnumProperty.DataSource>
+      <DataSource Persistence="ProjectFile" PersistedName="ApolloModuleType" />
+    </EnumProperty.DataSource>
+  </EnumProperty>
+  
+  <!-- Build type -->
+  <EnumProperty Name="ApolloBuildType" DisplayName="Build Type" Visible="True">
+	<EnumValue Name="dev" DisplayName="Development Build" Switch="build:dev" />
+	<EnumValue Name="prod" DisplayName="Production Build" Switch="build:prod" />
+	
+    <EnumProperty.DataSource>
+      <DataSource Persistence="ProjectFile" PersistedName="ApolloBuildType" />
+    </EnumProperty.DataSource>
+  </EnumProperty>
+  
+  <!-- Obfuscation Level -->
+  <EnumProperty Name="ApolloObfuscationLevel" DisplayName="Obfuscation Level" Visible="True">
+	<EnumValue Name="2" DisplayName="Full Obfuscation" Switch="obf:2" />
+	<EnumValue Name="1" DisplayName="Partial Obfuscation" Switch="obf:1" />
+	<EnumValue Name="0" DisplayName="No Obfuscation" Switch="obf:0" />
+	
+    <EnumProperty.DataSource>
+      <DataSource Persistence="ProjectFile" PersistedName="ApolloObfuscationLevel" />
+    </EnumProperty.DataSource>
+  </EnumProperty>
+  
+  <!-- Uploader settings -->
+  <StringProperty Name="ApolloProductId" DisplayName="Product ID" Visible="True">
+    <StringProperty.DataSource>
+      <DataSource Persistence="ProjectFile" PersistedName="ApolloProductId" />
+    </StringProperty.DataSource>
+  </StringProperty>
+  <StringProperty Name="ApolloTargetGroup" DisplayName="Group ID" Visible="True">
+    <StringProperty.DataSource>
+      <DataSource Persistence="ProjectFile" PersistedName="ApolloTargetGroup" />
+    </StringProperty.DataSource>
+  </StringProperty>
+  <StringProperty Name="ApolloTargetServer" DisplayName="Server Host" Visible="True">
+    <StringProperty.DataSource>
+      <DataSource Persistence="ProjectFile" PersistedName="ApolloTargetServer" />
+    </StringProperty.DataSource>
+  </StringProperty>
+  
+  <!-- Instrumentation Level -->
+  <EnumProperty Name="ApolloInstrumentation" DisplayName="Instrumentation" Visible="True">
+	<EnumValue Name="no" DisplayName="Disabled" Switch="instr:no" />
+	<EnumValue Name="yes" DisplayName="Enabled" Switch="instr:yes" />
+    <EnumProperty.DataSource>
+      <DataSource Persistence="ProjectFile" PersistedName="ApolloInstrumentation" />
+    </EnumProperty.DataSource>
+  </EnumProperty>
+  
+  <!-- LLVM Verify -->
+  <EnumProperty Name="ApolloLLVMVerify" DisplayName="Verify LLVM Output" Visible="True">
+	<EnumValue Name="yes" DisplayName="Yes" Switch="llvmvf:yes" />
+	<EnumValue Name="no" DisplayName="No" Switch="llvmvf:no" />
+	
+    <EnumProperty.DataSource>
+      <DataSource Persistence="ProjectFile" PersistedName="ApolloLLVMVerify" />
+    </EnumProperty.DataSource>
+  </EnumProperty>
+  
+  <!-- LLVM Save -->
+  <EnumProperty Name="ApolloLLVMSave" DisplayName="Save LLVM Output" Visible="True">
+	<EnumValue Name="yes" DisplayName="Yes" Switch="llvmsv:yes" />
+	<EnumValue Name="no" DisplayName="No" Switch="llvmsv:no" />
+	
+    <EnumProperty.DataSource>
+      <DataSource Persistence="ProjectFile" PersistedName="ApolloLLVMSave" />
+    </EnumProperty.DataSource>
+  </EnumProperty>
+  
+  <!-- LLVM Save Temp -->
+  <EnumProperty Name="ApolloLTOSaveTmp" DisplayName="Save LTO Output" Visible="True">
+	<EnumValue Name="yes" DisplayName="Yes" Switch="ltotmp:yes" />
+	<EnumValue Name="no" DisplayName="No" Switch="ltotmp:no" />
+	
+    <EnumProperty.DataSource>
+      <DataSource Persistence="ProjectFile" PersistedName="ApolloLTOSaveTmp" />
+    </EnumProperty.DataSource>
+  </EnumProperty>
+</Rule>

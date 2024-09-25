@@ -20,7 +20,7 @@ This is a very interesting repository including:
   - Automatic lifting of imports into lazy-imports
   - Automatic lifting of Syscall imports into syscall stubs
   - Profiler instrumentations with Chrome-Flamegraph compatible profiling in Kernel-mode
-  - VS2023 integration!
+  - VS2022 integration!
 - Mtigations against TSX side-channels using a novel method involving PMCs `/selene/su/mitigations`
 - Kernel-mode Sentry-compatible crashdumps as well as networked submission on BSOD `/shared/trace_snapshot` & `/selene/misc/crashdump`
 - And some other stuff I'm completely forgetting about

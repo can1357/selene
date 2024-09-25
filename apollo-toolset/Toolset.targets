@@ -1,0 +1,36 @@
+
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildThisFileDirectory)ImportBefore\*.targets" Condition="Exists('$(MSBuildThisFileDirectory)ImportBefore')" />
+  
+  <PropertyGroup>
+    <LLVMInstallDir Condition="'$(LLVM_PATH)' != ''">$(LLVM_PATH)</LLVMInstallDir>
+  </PropertyGroup>
+  
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.ClangCl.Common.targets"/>
+  
+  <ItemGroup>
+    <PropertyPageSchema Include="$(MSBuildThisFileDirectory)Config.xml"/>
+  </ItemGroup>
+  
+  <Import Project="$(MSBuildThisFileDirectory)ImportAfter\*.targets" Condition="Exists('$(MSBuildThisFileDirectory)ImportAfter')" />
+  
+  <!-- Add our additional options -->
+  <ItemDefinitionGroup>
+      <Link>
+        <AdditionalOptions>
+			%(Link.AdditionalOptions) 
+			/type:$(ApolloModuleType) 
+			/build:$(ApolloBuildType) 
+			/obf:$(ApolloObfuscationLevel)
+			/instr:$(ApolloInstrumentation) 
+			/llvmvf:$(ApolloLLVMVerify) 
+			/llvmvf:$(ApolloLLVMVerify) 
+			/llvmsv:$(ApolloLLVMSave)
+			/ltotmp:$(ApolloLTOSaveTmp)
+			/uproduct:$(ApolloProductId)
+			/ugroup:$(ApolloTargetGroup)
+			/utarget:$(ApolloTargetServer)
+		</AdditionalOptions>
+      </Link>
+  </ItemDefinitionGroup>
+</Project>
