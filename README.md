@@ -36,8 +36,8 @@ You will need to set the SeleneRoot environment variable to the root of the proj
 - [xstd](https://github.com/can1357/xstd)
 - [linux-pe](https://github.com/can1357/linux-pe)
 - [xed++](https://github.com/can1357/xedpp)
-- [ulua](https://github.com/can1357/ulua)
-- [rpmalloc](https://github.com/mjansson/rpmalloc) to be used as the kernel-mode allocator
+- [ulua](https://github.com/can1357/ulua) for flash scripting
+- [rpmalloc](https://github.com/mjansson/rpmalloc) to be used as the kernel-mode allocator (A fork of it for kernel-mode can be found [here](https://github.com/can1357/rpmalloc), but you can also fix up the original repo)
 - [XED](https://github.com/intelxed/xed) for disassembly
 - [LWIP](https://savannah.nongnu.org/projects/lwip) for NDIS-less networking
 - [zstd](https://github.com/facebook/zstd) if you want the custom `zcompressed` attribute
