@@ -1,6 +1,6 @@
 # selene
 
-[Hypervisor detection methods](https://github.com/can1357/hvdetecc/) I released yeseterday were dependent on a bunch of parts of this project, as well as my recent Patchguard bypass post, so I just decided to go for the whole thing.
+[Hypervisor detection methods](https://github.com/can1357/hvdetecc/) I released yesterday were dependent on a bunch of parts of this project, as well as my recent Patchguard bypass post, so I just decided to go for the whole thing.
 
 This is a very interesting repository including:
 - Runtime patchguard bypass working for all Windows versions `/selene/misc/nopg`
@@ -21,7 +21,7 @@ This is a very interesting repository including:
   - Automatic lifting of Syscall imports into syscall stubs
   - Profiler instrumentations with Chrome-Flamegraph compatible profile writer that can be used anywhere including baremetal kernel-mode
   - VS2022 integration!
-- Mtigations against TSX side-channels using a novel method involving PMCs `/selene/su/mitigations`
+- Mitigations against TSX side-channels using a novel method involving PMCs `/selene/su/mitigations`
 - Kernel-mode Sentry-compatible crashdumps as well as networked submission on BSOD `/shared/trace_snapshot` & `/selene/misc/crashdump`
 - And some other stuff I'm completely forgetting about
 
