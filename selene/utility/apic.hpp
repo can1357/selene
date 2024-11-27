@@ -9,7 +9,7 @@
 #include <ntpp.hpp>
 
 // TODO:
-// - Add dynamic processor count support.
+// - Add dynamic processor count support. [COMPLETED]
 //
 namespace apic
 {
